@@ -1,0 +1,17 @@
+[universe]
+index = "CSI300"
+
+# 用一轮真实调样的前后两个交易日，检查数据源的历史查询口径。
+snapshot_check_dates = ["2024-06-13", "2024-06-18"]
+
+[research]
+development_start = "2020-01-01"
+development_end = "2024-12-31"
+holdout_start = "2025-01-01"
+holdout_end = "2025-12-31"
+bars_start = "2019-09-01"
+
+[portfolio]
+initial_cash = 1000000
+top_n = 30
+rebalance = "weekly"

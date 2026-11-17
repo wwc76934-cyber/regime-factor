@@ -1,0 +1,60 @@
+# 沪深 300 多因子选股与市场状态配权
+
+本地量化课程项目。研究动态市场状态是否能改善沪深 300 历史成分股的周度选股，直接比较三因子等权、滚动 Ridge 和带市场状态交互项的滚动 Ridge。选题、因子评价和回测以开发期为主，2025 年是预设留出期。
+
+- 2020–2024 年开发期按历史时点取沪深 300 成分，覆盖 255 个信号周。
+- 计算 24 个候选量价因子，第 25 项换手率因子等待补齐数据。用周度 Rank IC、五分组收益和截面秩相关筛选候选。
+- 固定基线使用 `RET_5`、`VOL_60` 和 `CORR_PV_10`，另保留含 `BIAS_20` 的固定组合用于删减对照。
+- 滚动模型只用信号时点前已经结束的收益标签。市场状态变量为指数趋势、波动和历史成分上涨广度。
+- 模拟成交使用日线开盘价和明确的费用、停牌及涨跌停假设，并保留订单、实际持仓、分红送转和已核实配股流水。
+
+## 开发期结果
+
+评价区间为 2021-01-18 至 2024-12-31，从首个拟合信号执行日开始。模拟费率为买卖各 10 bps。
+
+| 组合 | 累计收益 | 最大回撤 | 平均每次双边换手 |
+| --- | ---: | ---: | ---: |
+| 三因子等权 | −5.96% | 31.15% | 139.82% |
+| 滚动 Ridge | +2.20% | 33.56% | 109.41% |
+| 市场状态 Ridge | +7.04% | 35.65% | 114.19% |
+
+市场状态版的领先主要集中在 2024 年后段。提高费率后，状态版仍领先普通 Ridge，两套模型的绝对收益均转负。留出期检验、全收益基准比较和前向模拟尚待完成。成交为历史模拟，使用日线和简化费用假设。
+
+## 本地运行
+
+在 Windows PowerShell 中运行。开发环境为 Python 3.12。
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+`configs/baseline.toml` 配置开发期、留出期、初始资金和目标持仓数。以项目根目录为当前目录，按下表顺序运行各阶段脚本。通用命令为 `.\.venv\Scripts\python.exe .\scripts\脚本文件名.py`。
+
+| 阶段 | 按顺序运行的脚本 |
+| --- | --- |
+| 数据采集 | `build_weekly_universe.py` → `fetch_daily_bars.py` → `audit_daily_bars.py` |
+| 因子研究 | `build_candidate_factors.py` → `build_forward_labels.py` → `evaluate_single_factors.py` → `analyze_factor_redundancy.py` |
+| 固定基线 | `build_fixed_scores.py` → `build_target_positions.py` |
+| 公司行动 | `audit_price_reference.py` → `fetch_corporate_actions.py` → `normalize_corporate_actions.py` → `apply_verified_actions.py` |
+| 固定组合回测 | `run_development_backtest_v2.py` → `compare_fixed_baselines.py` |
+| 状态与滚动权重 | `build_market_states.py` → `evaluate_volatility_regimes.py` → `build_walk_forward_controls.py` → `build_market_state_ridge.py` |
+
+`audit_price_reference.py` 依赖 `build_candidate_factors.py` 缓存的完整交易日历。行情和公司行动采集耗时，可用 `--limit 20` 分批运行。完成采集后可用本地缓存重跑研究流程。
+
+```powershell
+.\.venv\Scripts\python.exe .\scripts\run_development_backtest_with_targets.py `
+    --targets .\data\processed\portfolio\walk_forward\walk_forward_control_targets.parquet `
+    --output-dir .\reports\portfolio\walk_forward_controls
+
+.\.venv\Scripts\python.exe .\scripts\compare_walk_forward_controls.py
+
+.\.venv\Scripts\python.exe .\scripts\run_development_backtest_with_targets.py `
+    --targets .\data\processed\portfolio\walk_forward\walk_forward_three_variant_targets.parquet `
+    --output-dir .\reports\portfolio\walk_forward_three_variants
+
+.\.venv\Scripts\python.exe .\scripts\compare_market_state_ridge.py
+.\.venv\Scripts\python.exe .\scripts\audit_state_ridge_robustness.py
+```
+
+行情、指数和公司行动主要来自 [BaoStock](https://pypi.org/project/baostock/)。入门样本脚本另使用 [AKShare](https://github.com/akfamily/akshare)。`data/`、`reports/` 和 `.venv/` 由本地运行生成，仓库只跟踪代码、配置和项目说明。
