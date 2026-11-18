@@ -28,6 +28,10 @@
 
 [留出期复盘](research/holdout_2025/review.md)与[复跑说明](scripts/holdout_2025/README.md)。冻结六个模型，完成 14 组成本与缓冲对照。同期沪深 300 全收益指数上涨 20.98%，六个模型均落后基准。六输入 LightGBM 在单边 10 bp 下为 +5.01%，与三输入版的 +5.00% 接近；20 bp 下三输入版以 +3.53% 领先。已生成历史模拟账本，实时前向模拟仍待开始。
 
+## V2：波动率分层与组合管理
+
+[V2 完整复盘](research/v2_regime_tiered/review.md) · [复跑说明](research/v2_regime_tiered/README.md)。在已揭盲的 2025 年做回顾性比较：动态分层 LightGBM 在单边 10/20 bp 下为 +14.29% / +9.30%，V1 六输入 LightGBM 仅加得分 EMA 为 +14.13% / +11.78%。两者均落后沪深 300 全收益指数（+20.98%）。V1 留出期结果另行保留。
+
 ## 本地运行
 
 在 Windows PowerShell 中运行。开发环境为 Python 3.12。

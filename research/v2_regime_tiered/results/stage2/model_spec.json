@@ -1,0 +1,36 @@
+{
+  "models": [
+    "tiered_pure_alpha_equal",
+    "tiered_pure_alpha_ridge",
+    "tiered_three_factor_ridge",
+    "tiered_lightgbm_6f"
+  ],
+  "window": [
+    52,
+    104
+  ],
+  "ridge": [
+    0.05,
+    0.5
+  ],
+  "tree": {
+    "objective": "regression",
+    "learning_rate": 0.05,
+    "num_leaves": 7,
+    "max_depth": 3,
+    "min_data_in_leaf": 300,
+    "max_bin": 63,
+    "lambda_l2": 1.0,
+    "num_threads": 2,
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1,
+    "seed": 20261118
+  },
+  "rounds": 64,
+  "gamma": [
+    0,
+    0.5
+  ],
+  "include_review": false
+}
