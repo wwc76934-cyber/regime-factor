@@ -1,0 +1,22 @@
+{
+  "development_reference_commit": "5a95fb0d07deef1ada3b98b03f470bac7ac6c852",
+  "holdout_start": "2025-01-01",
+  "holdout_end": "2025-12-31",
+  "benchmark": "H00300",
+  "models": ["equal_weight", "rolling_ridge", "lightgbm_3f", "state_ridge", "three_diff_reg_050", "lightgbm_6f"],
+  "top_n": 30,
+  "buffer_ranks": [45],
+  "extra_execution": {"strategy": "state_ridge", "buffer_rank": 50},
+  "fee_bps": [10, 20],
+  "capital": "1000000",
+  "initial_state": "common cash at 2024-12-31 close; first trade at next scheduled weekly open inside 2025",
+  "training": {"min_weeks": 52, "window_weeks": 104, "availability": "exit <= current signal and previous signal only", "state_z_max": 3},
+  "ridge": {"rolling": 0.01, "state": 0.01, "diff_base": 0.05, "diff_state": 0.5},
+  "lightgbm": {"version":"4.6.0","rounds":64,"objective":"regression","learning_rate":0.05,"num_leaves":7,"max_depth":3,"min_data_in_leaf":300,"max_bin":63,"lambda_l2":1.0,"num_threads":2,"deterministic":true,"force_col_wise":true,"verbosity":-1,"seed":20261118},
+  "factor_features": ["pct_RET_5", "pct_VOL_60", "pct_CORR_PV_10"],
+  "market_states": ["market_return_20d", "market_volatility_20d", "market_breadth_20d"],
+  "ties": "score descending, stock code ascending",
+  "primary_result": "Top30 / retain45 / 10 bp; 20 bp and original Ridge retain50 are fixed sensitivity variants",
+  "attribution": "development fixed state medians; LightGBM gain/split and model prediction spreads, not causal estimates",
+  "signal_export": "last executed 2025 rebalance: actual buffered targets and simulated orders; no actual trade"
+}

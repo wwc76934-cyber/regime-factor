@@ -20,9 +20,13 @@
 
 市场状态版的领先主要集中在 2024 年后段。含前 45 名持仓缓冲时，在单边成本 10 bps 下，原三因子状态 Ridge 为 +16.05%，七因子稀疏和分离正则状态 Ridge 分别为 −2.28% 和 +3.98%。同区间沪深 300 全收益指数为 −20.66%，历史成分等权参考为 −10.07%。
 
-[筛选方法、复跑入口与消融结果](research/regime_factor_screening/README.md)：对 24 个候选因子进行双轨筛选，准入 7 个因子和 5 个状态交互。新版本降低换手，但没有替换原三因子状态模型的证据。2025 留出期检验及前向模拟尚待完成。
+[筛选方法、复跑入口与消融结果](research/regime_factor_screening/README.md)：对 24 个候选因子进行双轨筛选，准入 7 个因子和 5 个状态交互。新版本降低换手，但没有替换原三因子状态模型的证据。
 
 [三因子正则化、持仓缓冲与 LightGBM 对照](research/three_factor_experiments/review.md)：同用 Top 30 和前 45 名缓冲，六输入 LightGBM 在单边 10/20 bp 下的开发期累计收益为 +49.81% / +26.88%，原三因子状态 Ridge 为 +16.05% / −0.81%。原状态模型把缓冲放宽至前 50 名后为 +17.82% / +2.71%。[查看复跑说明](research/three_factor_experiments/README.md)与[汇总数据](research/three_factor_experiments/results/)。
+
+## 2025 留出期
+
+[留出期复盘](research/holdout_2025/review.md)与[复跑说明](scripts/holdout_2025/README.md)。冻结六个模型，完成 14 组成本与缓冲对照。同期沪深 300 全收益指数上涨 20.98%，六个模型均落后基准。六输入 LightGBM 在单边 10 bp 下为 +5.01%，与三输入版的 +5.00% 接近；20 bp 下三输入版以 +3.53% 领先。已生成历史模拟账本，实时前向模拟仍待开始。
 
 ## 本地运行
 

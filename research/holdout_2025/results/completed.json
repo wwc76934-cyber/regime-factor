@@ -1,0 +1,6 @@
+{
+  "spec_sha256": "83330a85709e5b3dad3e90ce44bcb898fe9df3e21a454c244227897a25ee1e2e",
+  "rows": 14,
+  "holdout_rebalance_weeks": 52,
+  "record_type": "historical_paper_replay"
+}
