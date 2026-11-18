@@ -1,0 +1,25 @@
+{
+  "breadth_mode_requested": "auto",
+  "breadth_residualized": true,
+  "screening_trend_breadth_pearson": 0.89104863771326,
+  "lambda_base_diff": 0.05,
+  "lambda_state_validation_winner": 0.5,
+  "state_penalty_grid": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "percentile_missing_policy": "neutral 0.5 on the unchanged legacy eligible universe",
+  "missing_signal_rows_by_factor": {
+    "CORR_PV_10": 0,
+    "VOL_60": 0,
+    "RET_5": 0,
+    "MAX_RET_20": 0,
+    "BIAS_20": 0,
+    "AMIHUD_20": 179,
+    "RET_60": 0
+  },
+  "min_weeks": 52,
+  "window_weeks": 104,
+  "state_z_limit": 3.0
+}

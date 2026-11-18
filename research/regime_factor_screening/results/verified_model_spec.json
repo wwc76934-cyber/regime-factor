@@ -1,0 +1,86 @@
+{
+  "selected_factors": [
+    {
+      "factor": "CORR_PV_10",
+      "direction": -1,
+      "track": "base"
+    },
+    {
+      "factor": "VOL_60",
+      "direction": -1,
+      "track": "base"
+    },
+    {
+      "factor": "RET_5",
+      "direction": -1,
+      "track": "base"
+    },
+    {
+      "factor": "MAX_RET_20",
+      "direction": -1,
+      "track": "base"
+    },
+    {
+      "factor": "BIAS_20",
+      "direction": -1,
+      "track": "base"
+    },
+    {
+      "factor": "AMIHUD_20",
+      "direction": 1,
+      "track": "conditional"
+    },
+    {
+      "factor": "RET_60",
+      "direction": -1,
+      "track": "conditional"
+    }
+  ],
+  "base_factors": [
+    "CORR_PV_10",
+    "VOL_60",
+    "RET_5",
+    "MAX_RET_20",
+    "BIAS_20"
+  ],
+  "active_interactions": [
+    {
+      "factor": "AMIHUD_20",
+      "state_name": "market_volatility_20d"
+    },
+    {
+      "factor": "MAX_RET_20",
+      "state_name": "market_breadth_20d"
+    },
+    {
+      "factor": "RET_5",
+      "state_name": "market_volatility_20d"
+    },
+    {
+      "factor": "RET_60",
+      "state_name": "market_volatility_20d"
+    },
+    {
+      "factor": "VOL_60",
+      "state_name": "market_breadth_20d"
+    }
+  ],
+  "state_features": [
+    "market_return_20d",
+    "market_volatility_20d",
+    "market_breadth_20d"
+  ],
+  "state_thresholds": {
+    "market_return_20d": 0.0017666474097328688,
+    "market_volatility_20d": 0.010875496211210672,
+    "market_breadth_20d": 0.42166666666666663
+  },
+  "selection_splits": [
+    "screening",
+    "validation"
+  ],
+  "core_A1_rule": "absolute IC >= 0.025",
+  "redundancy_threshold": 0.75,
+  "development_evaluation": "retrospective; factor and interaction gates use both development splits",
+  "base_orientation_rule": "sign of raw screening mean IC; Ridge coefficients are unconstrained"
+}

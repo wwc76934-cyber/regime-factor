@@ -10,7 +10,7 @@
 
 ## 开发期结果
 
-评价区间为 2021-01-18 至 2024-12-31，从首个拟合信号执行日开始。模拟费率为买卖各 10 bps。
+评价区间为 2021-01-18 至 2024-12-31，从首个拟合信号执行日开始。下表为无持仓缓冲、买卖各 10 bps 的基线。
 
 | 组合 | 累计收益 | 最大回撤 | 平均每次双边换手 |
 | --- | ---: | ---: | ---: |
@@ -18,7 +18,9 @@
 | 滚动 Ridge | +2.20% | 33.56% | 109.41% |
 | 市场状态 Ridge | +7.04% | 35.65% | 114.19% |
 
-市场状态版的领先主要集中在 2024 年后段。提高费率后，状态版仍领先普通 Ridge，两套模型的绝对收益均转负。留出期检验、全收益基准比较和前向模拟尚待完成。成交为历史模拟，使用日线和简化费用假设。
+市场状态版的领先主要集中在 2024 年后段。含前 45 名持仓缓冲时，在单边成本 10 bps 下，原三因子状态 Ridge 为 +16.05%，七因子稀疏和分离正则状态 Ridge 分别为 −2.28% 和 +3.98%。同区间沪深 300 全收益指数为 −20.66%，历史成分等权参考为 −10.07%。
+
+[筛选方法、复跑入口与消融结果](research/regime_factor_screening/README.md)：对 24 个候选因子进行双轨筛选，准入 7 个因子和 5 个状态交互。新版本降低换手，但没有替换原三因子状态模型的证据。2025 留出期检验及前向模拟尚待完成。
 
 ## 本地运行
 
@@ -53,8 +55,17 @@ python -m venv .venv
     --targets .\data\processed\portfolio\walk_forward\walk_forward_three_variant_targets.parquet `
     --output-dir .\reports\portfolio\walk_forward_three_variants
 
-.\.venv\Scripts\python.exe .\scripts\compare_market_state_ridge.py
 .\.venv\Scripts\python.exe .\scripts\audit_state_ridge_robustness.py
 ```
 
-行情、指数和公司行动主要来自 [BaoStock](https://pypi.org/project/baostock/)。入门样本脚本另使用 [AKShare](https://github.com/akfamily/akshare)。`data/`、`reports/` 和 `.venv/` 由本地运行生成，仓库只跟踪代码、配置和项目说明。
+运行完整因子筛选实验前，在前述流程之后构建基准和全排名：
+
+```powershell
+.\.venv\Scripts\python.exe .\scripts\fetch_csi300_total_return.py
+.\.venv\Scripts\python.exe .\scripts\build_csi300_equal_weight.py
+.\.venv\Scripts\python.exe .\scripts\compare_market_state_ridge.py
+.\.venv\Scripts\python.exe .\scripts\build_walk_forward_full_rankings.py
+.\.venv\Scripts\python.exe -B .\research\regime_factor_screening\run_verified_factor_pipeline.py --project-root .
+```
+
+行情、指数和公司行动主要来自 [BaoStock](https://pypi.org/project/baostock/)。入门样本脚本另使用 [AKShare](https://github.com/akfamily/akshare)。`data/`、`reports/` 和 `.venv/` 由本地运行生成，仓库跟踪代码、配置、项目说明和精选汇总表。

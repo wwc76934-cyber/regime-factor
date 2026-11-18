@@ -1,0 +1,4 @@
+strategy,validation_rank_ic,ic_weeks,state_penalty,chosen
+diff_0.5,0.08148505316163593,100,0.5,True
+diff_1,0.08007506485238597,100,1.0,False
+diff_2,0.07916146980887466,100,2.0,False
