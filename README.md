@@ -22,6 +22,8 @@
 
 [筛选方法、复跑入口与消融结果](research/regime_factor_screening/README.md)：对 24 个候选因子进行双轨筛选，准入 7 个因子和 5 个状态交互。新版本降低换手，但没有替换原三因子状态模型的证据。2025 留出期检验及前向模拟尚待完成。
 
+[三因子正则化、持仓缓冲与 LightGBM 对照](research/three_factor_experiments/review.md)：同用 Top 30 和前 45 名缓冲，六输入 LightGBM 在单边 10/20 bp 下的开发期累计收益为 +49.81% / +26.88%，原三因子状态 Ridge 为 +16.05% / −0.81%。原状态模型把缓冲放宽至前 50 名后为 +17.82% / +2.71%。[查看复跑说明](research/three_factor_experiments/README.md)与[汇总数据](research/three_factor_experiments/results/)。
+
 ## 本地运行
 
 在 Windows PowerShell 中运行。开发环境为 Python 3.12。

@@ -1,0 +1,11 @@
+﻿strategy,tied_top30_weeks,fitted_weeks
+equal_weight,32,202
+lightgbm_3f,44,202
+lightgbm_6f,116,202
+lightgbm_6f_reverse_ties,116,202
+rolling_ridge,0,202
+state_ridge,0,202
+three_core_interaction,0,202
+three_diff_reg_050,0,202
+three_diff_reg_100,0,202
+three_main_ridge_005,0,202

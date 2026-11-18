@@ -1,0 +1,120 @@
+{
+  "factors": [
+    "pct_RET_5",
+    "pct_VOL_60",
+    "pct_CORR_PV_10"
+  ],
+  "states": [
+    "market_return_20d",
+    "market_volatility_20d",
+    "market_breadth_20d"
+  ],
+  "state_transform": "training window z score, clip \u00b13; no residualization",
+  "ridge_columns": [
+    "base",
+    "market_return_20d",
+    "market_volatility_20d",
+    "market_breadth_20d"
+  ],
+  "ridge_models": {
+    "state_ridge_replication": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      0.01,
+      0.01
+    ],
+    "three_main_ridge_005": [
+      [
+        0,
+        1,
+        2
+      ],
+      0.05,
+      0.0
+    ],
+    "three_diff_reg_050": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      0.05,
+      0.5
+    ],
+    "three_diff_reg_100": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      0.05,
+      1.0
+    ],
+    "three_core_interaction": [
+      [
+        0,
+        1,
+        2,
+        6,
+        10
+      ],
+      0.01,
+      0.01
+    ]
+  },
+  "tree_models": [
+    "lightgbm_3f",
+    "lightgbm_6f"
+  ],
+  "tree_parameters": {
+    "objective": "regression",
+    "learning_rate": 0.05,
+    "num_leaves": 7,
+    "max_depth": 3,
+    "min_data_in_leaf": 300,
+    "max_bin": 63,
+    "lambda_l2": 1.0,
+    "num_threads": 2,
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1,
+    "seed": 20261118
+  },
+  "tree_rounds": 64,
+  "lightgbm": "4.6.0",
+  "scipy": "1.17.1",
+  "fitted_weeks": 202,
+  "training_links": 19630,
+  "tree_training_and_prediction_seconds": 22.20505179988686,
+  "build_seconds": 30.879619899962563
+}
