@@ -50,7 +50,20 @@ foreach ($h in 5, 10, 20) {
 
 输出见 [Step 2 结果](results/step2/REVIEW.md)。信号指标使用相同的持有期收盘收益。组合交易、费用以及冻结前的各项红线属于后续实验。
 
+## Step 3 指数增强与执行消融
+
+```powershell
+foreach ($block in "core", "frequency", "controls", "turnover_sensitivity") {
+  .\.venv\Scripts\python.exe -B .\scripts\v3_1\optimize_v3_1_portfolio.py --block $block
+}
+.\.venv\Scripts\python.exe -B .\scripts\v3_1\summarize_v3_1_portfolio.py
+```
+
+[组合与执行审计](results/step3/REVIEW.md) 汇总 32 条账本及各项门槛。正式基准为 H00300，并同步保存 FloatMV 与 CSI300_EW 的逐年和全期超额。部分账本需补核公司行动及期末缺报价证券，2026 保留段继续隔离。
+
 验收表的每一行都作为新版冻结门槛。多头信号、交易成本、组合 Beta 达标和公司行动账本分别审计。
+
+[公司行动公告核对](results/step3/company_action_evidence.md) 汇总分红与两笔换股的发行人披露，账本待重算。
 
 ## 仓库产物
 

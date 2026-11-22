@@ -40,9 +40,9 @@ V3 将开发样本扩展至 2015–2025 年，增加市场调整收益标签、L
 
 ## V3.1 指数增强研究进展
 
-已完成开发数据审计、分层六因子筛选、60 日价值相对趋势状态，以及 5、10、20 日滚动模型对照。状态 Ridge 和 Huber LightGBM 通过 Step 2 信号门槛。组合优化、扣费回测及 2026 保留段评价进入后续阶段。
+已完成开发数据审计、分层六因子筛选、60 日价值相对趋势状态，以及 5、10、20 日滚动模型对照。状态 Ridge 和 Huber LightGBM 通过 Step 2 信号门槛。Step 3 已完成 32 组组合消融并记录 No-Go，部分账本需按已核对的公司行动重算。2026 保留段继续隔离。
 
-[运行说明](research/v3_1/README.md) · [因子与风格审计](research/v3_1/results/step1/REVIEW.md) · [滚动模型结果](research/v3_1/results/step2/REVIEW.md)
+[运行说明](research/v3_1/README.md) · [因子与风格审计](research/v3_1/results/step1/REVIEW.md) · [滚动模型结果](research/v3_1/results/step2/REVIEW.md) · [组合与执行审计](research/v3_1/results/step3/REVIEW.md)
 
 ## 本地运行
 
