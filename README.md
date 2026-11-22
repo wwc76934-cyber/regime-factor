@@ -32,6 +32,12 @@
 
 [V2 完整复盘](research/v2_regime_tiered/review.md) · [复跑说明](research/v2_regime_tiered/README.md)。在已揭盲的 2025 年做回顾性比较：动态分层 LightGBM 在单边 10/20 bp 下为 +14.29% / +9.30%，V1 六输入 LightGBM 仅加得分 EMA 为 +14.13% / +11.78%。两者均落后沪深 300 全收益指数（+20.98%）。V1 留出期结果另行保留。
 
+## V3 长周期研究
+
+V3 将开发样本扩展至 2015–2025 年，增加市场调整收益标签、LambdaRank、市场门控网络与带 Beta 约束的组合优化。已完成开发期消融和 2026 年保留段登记，2026 评价有待采集。
+
+[开发报告](research/v3/DEVELOPMENT_REPORT.md) · [本地流程](research/v3/README.md) · [2026 冻结登记](research/v3/freeze_registration_2026.json)
+
 ## 本地运行
 
 在 Windows PowerShell 中运行。开发环境为 Python 3.12。

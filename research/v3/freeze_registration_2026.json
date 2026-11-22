@@ -1,0 +1,155 @@
+{
+  "configuration": {
+    "development_sha256": {
+      "step2/factor_panel.parquet": "64162e402f06fbbb99e3b7c8e706cc8373a6958fc99dddd5a3dc631acc788588",
+      "step2/features.json": "ec0b9e8959f903decccb7669a9ef23f9521974d57590e4a95e78bf9f414236bd",
+      "step2/states.parquet": "1e3ca24a8cd1fb57b66a515c7e3df6392c2798e1a3fec28db891dd881a503b14",
+      "step3/model_metrics.csv": "aa90a095866fe86d2e70c32b6c7d584eaf4169db092c870d0938b66b07758af6",
+      "step3/model_spec.json": "66c19971919080facc19609a09d67658afb93d0f9973afc31f846cfb10a18459",
+      "step3/predictions.parquet": "0d32b3fe5756c14a50de498dc4f6119ad15a42e5e012bb0c3a14df5759488180",
+      "step4/portfolio_metrics.csv": "a5e0f16ba96d0bc022f59061db4ff853479e381c6d6a3d504b9391aea967b80c",
+      "step4/unresolved_exposure.csv": "384fd06b2ffc3d2db29903afdc27c4b33f6a0f8c6a9f58599b3461ae143152cd"
+    },
+    "factors": {
+      "beta": "120 sessions, >=100 matched returns, clip [0.2,2.2]",
+      "directions": {
+        "BIAS_20": -1,
+        "CORR_PV_10": -1,
+        "MOM_20_SKIP5": -1,
+        "RET_5": -1,
+        "RET_60": -1,
+        "TURN_20": -1
+      },
+      "selected": [
+        "TURN_20",
+        "CORR_PV_10",
+        "RET_5",
+        "BIAS_20",
+        "RET_60",
+        "MOM_20_SKIP5"
+      ],
+      "selection": "screen 2015–2018, validate 2019–2022, same rows for raw and adjusted IC",
+      "states": [
+        "market_return_20d",
+        "market_volatility_20d",
+        "market_breadth_20d",
+        "tier_vol_spread_20d"
+      ],
+      "v1_directions": {
+        "CORR_PV_10": -1,
+        "RET_5": -1,
+        "VOL_60": -1
+      }
+    },
+    "holdout_end": "2026-11-13",
+    "holdout_start": "2026-01-01",
+    "last_development_date": "2025-12-31",
+    "models": {
+      "backend": "numpy",
+      "gate_batch_weeks": 8,
+      "gate_steps_first": 30,
+      "gate_steps_later": 8,
+      "min_weeks": 52,
+      "training_window": 260,
+      "tree": {
+        "deterministic": true,
+        "force_col_wise": true,
+        "lambda_l2": 1.0,
+        "lambdarank_truncation_level": 33,
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "metric": "ndcg",
+        "min_data_in_leaf": 300,
+        "ndcg_at": [
+          30
+        ],
+        "num_leaves": 7,
+        "num_threads": 2,
+        "objective": "lambdarank",
+        "seed": 731,
+        "verbosity": -1
+      },
+      "tree_refit_weeks": 4,
+      "tree_rounds": 80
+    },
+    "portfolio": {
+      "beta_bands": {
+        "defensive": [
+          0.65,
+          0.8
+        ],
+        "neutral": [
+          0.85,
+          0.95
+        ],
+        "offensive": [
+          0.95,
+          1.1
+        ]
+      },
+      "buffer_rank": 45,
+      "concentration_penalty": 2.5,
+      "fee_bp": [
+        10,
+        20
+      ],
+      "initial_cash": 1000000,
+      "max_weight": 0.045,
+      "turnover_penalty": 0.16
+    },
+    "previous_exposure": "Earlier V1 forward data exists locally. V3 freeze uses only 2015–2025 inputs.",
+    "primary_forward": "v3_state_ridge__optimized__10bp",
+    "runtime": {
+      "lightgbm": "4.6.0",
+      "numpy": "2.5.5",
+      "pandas": "3.1.1",
+      "pyarrow": "26.0.1",
+      "python": [
+        3,
+        12,
+        0
+      ],
+      "scipy": "1.17.1"
+    },
+    "source_sha256": {
+      "apply_verified_actions.py": "4d305c647dc981b6f2f8fde0da5240c52ecee3c114fb22cd509ce08434c081d6",
+      "build_candidate_factors.py": "f29ca14d2a376844defdbc96f2948edaa4c739e07068ad0ee49f9e82fa830ca3",
+      "build_forward_labels.py": "db385d60542d03e1414a39fda2dcefd941605a7d1a842ac0dffcd5f7a32c4c1b",
+      "fetch_csi300_total_return.py": "b48dbfdb5a0652a811fc273634e97e6765436c1bd974370e876a4d81b6ba6c84",
+      "holdout_2025/verified_actions_2025.csv": "8b6d0a4300798dce79f2827706cb9efc158cca4e25b7686087a79f51423a5ce9",
+      "normalize_corporate_actions.py": "233302f024763605cc3822d6ca35e70f7c44333683adbfd52fcf7c3f19496712",
+      "v3/build_v3_factors_and_labels.py": "f4f694724a3be3b92ecce5a757ade59ed8e41d39b42db69507396a60fc6878b9",
+      "v3/fetch_and_audit_v3_data.py": "5d2cfa3124fff6162ab9b3dda37fc999d81f964276b04f9726b1c5b3e071598c",
+      "v3/optimize_v3_portfolio.py": "1c79dfcfded6b0ac11789124d7614bbcd575215be96d13098f9871d764eb694e",
+      "v3/run_v3_evaluation_and_holdout_2026.py": "aaef6a47642b8b643cb09da19b7a098ea5eb09009dc9763b6c70d078fa632215",
+      "v3/train_v3_models.py": "dc84887f58ae2e5a6c6b382ec9d294661e3e40d3d5a8eec0e59a1312f02755f5",
+      "v3/v3_execution.py": "8be78a7e0b2cbfc752a274fcd163297e770e5ff6da16db1f7584b0d23015eef9"
+    },
+    "variants": [
+      "core_long_alpha__buffer__10bp",
+      "core_long_alpha__buffer__20bp",
+      "core_long_raw__buffer__10bp",
+      "core_long_raw__buffer__20bp",
+      "expanded_long_raw__buffer__10bp",
+      "expanded_long_raw__buffer__20bp",
+      "v1_rolling_104__buffer__10bp",
+      "v1_rolling_104__buffer__20bp",
+      "v3_lgb_lambdarank__buffer__10bp",
+      "v3_lgb_lambdarank__buffer__20bp",
+      "v3_lgb_lambdarank__optimized__10bp",
+      "v3_lgb_lambdarank__optimized__20bp",
+      "v3_master_gating_net__buffer__10bp",
+      "v3_master_gating_net__buffer__20bp",
+      "v3_master_gating_net__optimized__10bp",
+      "v3_master_gating_net__optimized__20bp",
+      "v3_state_ridge__buffer__10bp",
+      "v3_state_ridge__buffer__20bp",
+      "v3_state_ridge__optimized__10bp",
+      "v3_state_ridge__optimized__20bp",
+      "v3_state_ridge_similarity__buffer__10bp",
+      "v3_state_ridge_similarity__buffer__20bp"
+    ]
+  },
+  "configuration_sha256": "bad88526cb14ca7ee88bef97705d89b1bf2c83d7dc7a4973507ab4941bc86d29",
+  "registered_utc": "2026-11-22T02:57:19.769845+00:00"
+}

@@ -1,0 +1,6 @@
+freeze_registration_2026.json -text
+results/step2/features.json -text
+results/step3/model_spec.json -text
+results/step3/model_metrics.csv -text
+results/step4/portfolio_metrics.csv -text
+results/step4/unresolved_exposure.csv -text

@@ -1,0 +1,28 @@
+{
+  "backend": "numpy",
+  "tree": {
+    "objective": "lambdarank",
+    "metric": "ndcg",
+    "ndcg_at": [
+      30
+    ],
+    "lambdarank_truncation_level": 33,
+    "learning_rate": 0.05,
+    "max_depth": 3,
+    "num_leaves": 7,
+    "min_data_in_leaf": 300,
+    "lambda_l2": 1.0,
+    "force_col_wise": true,
+    "deterministic": true,
+    "num_threads": 2,
+    "verbosity": -1,
+    "seed": 731
+  },
+  "tree_rounds": 80,
+  "tree_refit_weeks": 4,
+  "training_window": 260,
+  "min_weeks": 52,
+  "gate_steps_first": 30,
+  "gate_steps_later": 8,
+  "gate_batch_weeks": 8
+}

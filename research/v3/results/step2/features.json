@@ -1,0 +1,31 @@
+{
+  "selected": [
+    "TURN_20",
+    "CORR_PV_10",
+    "RET_5",
+    "BIAS_20",
+    "RET_60",
+    "MOM_20_SKIP5"
+  ],
+  "directions": {
+    "TURN_20": -1,
+    "CORR_PV_10": -1,
+    "RET_5": -1,
+    "BIAS_20": -1,
+    "RET_60": -1,
+    "MOM_20_SKIP5": -1
+  },
+  "v1_directions": {
+    "RET_5": -1,
+    "VOL_60": -1,
+    "CORR_PV_10": -1
+  },
+  "selection": "screen 2015\u20132018, validate 2019\u20132022, same rows for raw and adjusted IC",
+  "beta": "120 sessions, >=100 matched returns, clip [0.2,2.2]",
+  "states": [
+    "market_return_20d",
+    "market_volatility_20d",
+    "market_breadth_20d",
+    "tier_vol_spread_20d"
+  ]
+}
