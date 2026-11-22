@@ -1,6 +1,7 @@
 {
   "status": "no_go",
-  "variants": 32,
+  "variants": 64,
+  "optimizer_grid_variants": 32,
   "corporate_action_keys_requiring_review": 1,
   "terminal_stale_codes_requiring_review": 2,
   "all_ledgers_verified": false,

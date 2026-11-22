@@ -2,6 +2,7 @@
 import argparse
 from dataclasses import dataclass
 from decimal import Decimal
+from itertools import product
 import json
 from pathlib import Path
 
@@ -30,10 +31,30 @@ class Variant:
     construction: str = "dynamic"
     eta: float = .96
     ema: float = 1.
+    tc_penalty_bps: int | None = None
+    risk_aversion: float = RISK_AVERSION
+    active_limit: float = ACTIVE_LIMIT
+
+    @property
+    def tc_setting(self):
+        if self.construction == "unanchored":
+            return "legacy_score_units"
+        if self.tc_penalty_bps is None:
+            return "match_execution_fee"
+        return f"fixed_{self.tc_penalty_bps}bp"
+
+    @property
+    def effective_tc_penalty_bps(self):
+        if self.construction == "unanchored":
+            return None
+        return self.fee_bps if self.tc_penalty_bps is None else self.tc_penalty_bps
 
     @property
     def name(self):
-        return f"{self.model}_h{self.horizon}_{self.construction}_eta{self.eta:g}_ema{self.ema:g}_{self.fee_bps}bp"
+        stem = f"{self.model}_h{self.horizon}_{self.construction}_eta{self.eta:g}_ema{self.ema:g}_{self.fee_bps}bp"
+        if self.tc_penalty_bps is None:
+            return stem
+        return f"{stem}_tc{self.tc_penalty_bps}_risk{self.risk_aversion:g}_active{self.active_limit:g}"
 
 
 def variants(block):
@@ -48,6 +69,9 @@ def variants(block):
         elif block=="turnover_sensitivity":
             for horizon in (10,20):
                 yield Variant(FUSION,horizon,fee,ema=.3)
+        elif block=="optimizer_grid":
+            for horizon,tc,risk,active in product((5,10),(20,25),(10,15),(.015,.02)):
+                yield Variant(FUSION,horizon,fee,ema=.3,tc_penalty_bps=tc,risk_aversion=risk,active_limit=active)
         else:
             for horizon in (10,20):
                 yield Variant(FUSION,horizon,fee,eta=1.)
@@ -154,8 +178,9 @@ def make_planner(variant, schedule, signals, calibration, market, states, quotes
             idio = base.IDIO_VAR_60.fillna(base.IDIO_VAR_60.median()).clip(lower=.005**2).to_numpy()*horizons
             target,attainable_lo,attainable_hi,infeasible = solve_active(
                 anchor, fitted_ic*horizon_sigma*score, estimate, idio,
-                float(st.market_volatility_20d**2*horizons), prior, fee, lo/variant.eta,hi/variant.eta)
-            cap = np.minimum(SINGLE_LIMIT,anchor+ACTIVE_LIMIT)
+                float(st.market_volatility_20d**2*horizons), prior, variant.effective_tc_penalty_bps/10000,
+                lo/variant.eta,hi/variant.eta,risk_aversion=variant.risk_aversion,active_limit=variant.active_limit)
+            cap = np.minimum(SINGLE_LIMIT,anchor+variant.active_limit)
         target_data = {}
         for i, code in enumerate(base.index):
             if target[i] > 1e-10 or code in old:
@@ -233,7 +258,7 @@ def benchmark_metrics(nav, benchmarks):
     return pd.DataFrame(rows),pd.DataFrame(annual)
 
 
-def run(root, out, block):
+def run(root, out, block, grid_horizon=None, grid_fee=None):
     v3, _, days, _, _ = initialize(root)
     from optimize_v3_portfolio import (ACTION_COLUMNS, EXPOSURE_COLUMNS, HOLDING_COLUMNS, NAV_COLUMNS,
         ORDER_COLUMNS, execution_objects, load_actions)
@@ -259,11 +284,15 @@ def run(root, out, block):
     market = prepare_market(factors,anchor)
     beta_history = factors.pivot(index="signal_date",columns="code",values="BETA_120").ffill().stack()
     beta_history = beta_history.rename("BETA_120").reset_index()
+    grid = [v for v in variants(block) if (grid_horizon is None or v.horizon==grid_horizon)
+            and (grid_fee is None or v.fee_bps==grid_fee)]
+    if not grid:
+        raise ValueError("No strategies match this block")
     predictions = {h:pd.read_parquet(step2/f"h{h}"/"predictions.parquet") for h in (5,10,20)}
     first = max(p.entry_date.min() for p in predictions.values())
     sets = {}
     result,tri,by_year,beta_table,all_issues = [],[],[],[],[]
-    for v in variants(block):
+    for v in grid:
         key = (v.model,v.horizon,v.ema)
         if key not in sets:
             sets[key] = scores_by_variant(predictions[v.horizon],labels.loc[labels.horizon.eq(v.horizon)],v.model,v.ema)
@@ -304,6 +333,9 @@ def run(root, out, block):
         offensive = groups.set_index("regime").loc["offensive","regime_beta_hit_rate"]
         row={"strategy":v.name,"model":v.model,"horizon":v.horizon,"fee_bps":v.fee_bps,
              "construction":v.construction,"eta":v.eta,"ema":v.ema,"rebalance_count":len(schedule),
+             "tc_setting":v.tc_setting,"tc_penalty_bps":v.effective_tc_penalty_bps,
+             "risk_aversion":v.risk_aversion if v.construction!="unanchored" else 0.,
+             "active_limit":v.active_limit if v.construction!="unanchored" else 0.,
              "weekly_equivalent_two_way_turnover":progress,"offensive_beta_hit":offensive,
              "unresolved_exposures":len(issues),"unreachable_target_days":int(beta.unreachable_target.sum()),
              "stale_marks":int(nav.stale_count.sum()),"fees":nav.fee.sum(),"net_return":ref.net_return,
@@ -312,16 +344,18 @@ def run(root, out, block):
              "CSI300_EW_excess":triplet.set_index("benchmark").loc["CSI300_EW","cumulative_excess_pp"]}
         result.append(row)
         print(f"{v.name}: net {ref.net_return:+.2%}, H00300 excess {ref.cumulative_excess_pp:+.2%}, "
-              f"weekly turnover {progress:.2%}, offensive beta hit {offensive:.2%}, issues {len(issues)}",flush=True)
+              f"IR {ref.information_ratio:+.3f}, weekly turnover {progress:.2%}, "
+              f"offensive beta hit {offensive:.2%}, issues {len(issues)}",flush=True)
     for name,table in [("model_portfolio_comparison_v3_1.csv",pd.DataFrame(result)),
                        ("benchmark_comparison_v3_1.csv",pd.concat(tri,ignore_index=True)),
                        ("annual_benchmarks_v3_1.csv",pd.concat(by_year,ignore_index=True)),
                        ("beta_by_regime_v3_1.csv",pd.concat(beta_table,ignore_index=True)),
                        ("unresolved_exposure.csv",pd.concat(all_issues,ignore_index=True))]:
         v3.save(table,out/name)
-    (out/"experiment_spec.json").write_text(json.dumps({"risk_aversion":RISK_AVERSION,"initial_cash":str(INITIAL),
+    (out/"experiment_spec.json").write_text(json.dumps({"risk_aversion":sorted({v.risk_aversion for v in grid}),
+        "tc_settings":sorted({v.tc_setting for v in grid}),"initial_cash":str(INITIAL),
         "period":["2017-01-01","2025-12-31"],"turnover":"sum of daily gross traded / opening NAV, scaled by 5/sessions",
-        "funding_buffer_eta":.96,"active_limit":ACTIVE_LIMIT,"absolute_limit":SINGLE_LIMIT,
+        "funding_buffer_eta":.96,"active_limit":sorted({v.active_limit for v in grid}),"absolute_limit":SINGLE_LIMIT,
         "execution":"every h sessions at open, latest earlier weekly signal", "issue_free":not any(len(x) for x in all_issues)},
         indent=2),encoding="utf-8")
 
@@ -329,7 +363,17 @@ def run(root, out, block):
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project-root",type=Path,default=Path.cwd())
-    parser.add_argument("--block",choices=["core","frequency","controls","turnover_sensitivity"],required=True)
+    parser.add_argument("--block",choices=["core","frequency","controls","turnover_sensitivity","optimizer_grid"],required=True)
     parser.add_argument("--output",type=Path)
+    parser.add_argument("--grid-horizon",type=int,choices=[5,10])
+    parser.add_argument("--grid-fee-bps",type=int,choices=[10,20])
     args=parser.parse_args()
-    run(args.project_root.resolve(),args.output or args.project_root/"research/v3_1/results/step3"/args.block,args.block)
+    grid_ids = (args.grid_horizon,args.grid_fee_bps)
+    if args.block=="optimizer_grid" and not all(grid_ids):
+        parser.error("Optimizer grid requires --grid-horizon and --grid-fee-bps")
+    if args.block!="optimizer_grid" and any(grid_ids):
+        parser.error("Grid flags apply only to the optimizer grid")
+    destination = args.project_root/"research/v3_1/results/step3"/args.block
+    if args.block=="optimizer_grid":
+        destination /= f"h{args.grid_horizon}_{args.grid_fee_bps}bp"
+    run(args.project_root.resolve(),args.output or destination,args.block,*grid_ids)

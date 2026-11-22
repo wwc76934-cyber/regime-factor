@@ -59,7 +59,18 @@ foreach ($block in "core", "frequency", "controls", "turnover_sensitivity") {
 .\.venv\Scripts\python.exe -B .\scripts\v3_1\summarize_v3_1_portfolio.py
 ```
 
-[组合与执行审计](results/step3/REVIEW.md) 汇总 32 条账本及各项门槛。正式基准为 H00300，并同步保存 FloatMV 与 CSI300_EW 的逐年和全期超额。部分账本需补核公司行动及期末缺报价证券，2026 保留段继续隔离。
+[组合与执行审计](results/step3/REVIEW.md) 汇总首轮 32 条账本和 32 条优化器敏感性账本。正式基准为 H00300，并同步保存 FloatMV 与 CSI300_EW 的逐年和全期超额。部分账本仍需按公司行动公告重算，2026 保留段继续隔离。
+
+复跑优化器网格：
+
+```powershell
+foreach ($h in 5, 10) {
+  foreach ($fee in 10, 20) {
+    .\.venv\Scripts\python.exe -B .\scripts\v3_1\optimize_v3_1_portfolio.py --block optimizer_grid --grid-horizon $h --grid-fee-bps $fee
+  }
+}
+.\.venv\Scripts\python.exe -B .\scripts\v3_1\summarize_v3_1_portfolio.py
+```
 
 验收表的每一行都作为新版冻结门槛。多头信号、交易成本、组合 Beta 达标和公司行动账本分别审计。
 

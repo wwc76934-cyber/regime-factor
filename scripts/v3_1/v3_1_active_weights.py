@@ -22,10 +22,11 @@ def end_beta(beta, low, high, ascending):
     return float(w @ beta)
 
 
-def solve_active(anchor, mu, beta, idio_var, market_var, previous, cost, lower_beta, upper_beta):
+def solve_active(anchor, mu, beta, idio_var, market_var, previous, cost, lower_beta, upper_beta,
+                 *, risk_aversion=RISK_AVERSION, active_limit=ACTIVE_LIMIT):
     """Minimize diagonal plus single-factor risk, minus alpha, plus exact L1 turnover cost."""
-    low = np.maximum(0, anchor - ACTIVE_LIMIT)
-    high = np.minimum(SINGLE_LIMIT, anchor + ACTIVE_LIMIT)
+    low = np.maximum(0, anchor - active_limit)
+    high = np.minimum(SINGLE_LIMIT, anchor + active_limit)
     if (low > high + 1e-12).any() or low.sum() > 1 + 1e-12 or high.sum() < 1 - 1e-12:
         raise ValueError("Infeasible full-investment active weight bounds")
     feasible_low = end_beta(beta, low, high, True)
@@ -33,8 +34,8 @@ def solve_active(anchor, mu, beta, idio_var, market_var, previous, cost, lower_b
     target_low = float(np.clip(lower_beta, feasible_low, feasible_high))
     target_high = float(np.clip(upper_beta, feasible_low, feasible_high))
     infeasible = upper_beta < feasible_low-1e-9 or lower_beta > feasible_high+1e-9
-    diagonal = RISK_AVERSION * idio_var
-    market_risk = RISK_AVERSION * market_var
+    diagonal = risk_aversion * idio_var
+    market_risk = risk_aversion * market_var
     anchor_beta = float(anchor @ beta)
     kink = np.clip(previous, low, high)
 

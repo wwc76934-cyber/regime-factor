@@ -1,5 +1,6 @@
 """Merge Step 3 ablations, three-benchmark results and operational gates."""
 import argparse
+from itertools import product
 import json
 from pathlib import Path
 
@@ -8,11 +9,12 @@ import pandas as pd
 
 
 BLOCKS = ("core","frequency","controls","turnover_sensitivity")
-KEY = ["model","horizon","construction","eta","ema"]
+GRID = tuple(f"optimizer_grid/h{h}_{bps}bp" for h,bps in product((5,10),(10,20)))
+KEY = ["model","horizon","construction","eta","ema","tc_setting","risk_aversion","active_limit"]
 
 
-def read_parts(root, name):
-    return pd.concat([pd.read_csv(root/block/name) for block in BLOCKS],ignore_index=True)
+def read_parts(root, blocks, name):
+    return pd.concat([pd.read_csv(root/block/name) for block in blocks],ignore_index=True)
 
 
 def save(frame, path):
@@ -22,16 +24,40 @@ def save(frame, path):
 def run(root):
     names = ["model_portfolio_comparison_v3_1.csv","benchmark_comparison_v3_1.csv",
              "annual_benchmarks_v3_1.csv","beta_by_regime_v3_1.csv","unresolved_exposure.csv"]
-    portfolio,base,annual,beta,issues = [read_parts(root,name) for name in names]
+    blocks = BLOCKS + GRID if (root/"optimizer_grid").exists() else BLOCKS
+    portfolio,base,annual,beta,issues = [read_parts(root,blocks,name) for name in names]
     issues["date"] = pd.to_datetime(issues.date,format="mixed")
     expected = set(portfolio.strategy)
-    if len(portfolio)!=32 or len(expected)!=32 or base.groupby("strategy").benchmark.nunique().ne(3).any():
+    expected_size = 64 if len(blocks)>len(BLOCKS) else 32
+    if len(portfolio)!=expected_size or len(expected)!=expected_size or base.groupby("strategy").benchmark.nunique().ne(3).any():
         raise ValueError("Incomplete or duplicated Step 3 experiment matrix")
     if set(base.strategy)!=expected or set(annual.strategy)!=expected or set(beta.strategy)!=expected:
         raise ValueError("Step 3 table strategy coverage differs")
+    legacy = portfolio.construction.eq("unanchored")
+    defaults = {"tc_setting":pd.Series(np.where(legacy,"legacy_score_units","match_execution_fee"),index=portfolio.index),
+                "tc_penalty_bps":portfolio.fee_bps.where(~legacy),
+                "risk_aversion":pd.Series(np.where(legacy,0.,6.),index=portfolio.index),
+                "active_limit":pd.Series(np.where(legacy,0.,.03),index=portfolio.index)}
+    for field, values in defaults.items():
+        portfolio[field] = portfolio[field].fillna(values) if field in portfolio else values
+    is_grid = portfolio.tc_setting.str.startswith("fixed_")
+    if len(blocks)>len(BLOCKS):
+        cols = ["horizon","fee_bps","tc_penalty_bps","risk_aversion","active_limit"]
+        seen = set(portfolio.loc[is_grid,cols].itertuples(index=False,name=None))
+        grid = set(product((5,10),(10,20),(20,25),(10,15),(.015,.02)))
+        if seen!=grid or is_grid.sum()!=len(grid):
+            raise ValueError("Optimizer grid is missing or repeats a parameter combination")
+    official_ir = base.loc[base.benchmark.eq("H00300")].set_index("strategy").information_ratio
+    computed = portfolio.strategy.map(official_ir)
+    recorded = portfolio.get("H00300_ir",pd.Series(np.nan,index=portfolio.index))
+    if not np.allclose(recorded.dropna(),computed.loc[recorded.notna()],atol=1e-10,rtol=1e-10):
+        raise ValueError("Portfolio IR differs from its benchmark result")
+    portfolio["H00300_ir"] = computed
+    if portfolio.loc[portfolio.ema.lt(1),"H00300_ir"].isna().any():
+        raise ValueError("EMA portfolio is missing H00300 IR")
     stuck = []
     end = pd.Timestamp("2025-12-31")
-    for block in BLOCKS:
+    for block in blocks:
         for folder in (root/block/"runs").iterdir():
             h = pd.read_parquet(folder/"holdings.parquet",columns=["code","date","shares","locked_shares","value","stale"],
                                 filters=[("stale","==",True)])
@@ -85,8 +111,18 @@ def run(root):
                         ("beta_buffer_ablation.csv",eta_cmp),("corporate_action_review_required.csv",issue_keys),
                         ("terminal_stale_positions.csv",terminal)]:
         save(frame,root/name)
+    if is_grid.any():
+        metrics = ["H00300_ir","H00300_excess","weekly_equivalent_two_way_turnover","offensive_beta_hit"]
+        reference = portfolio.loc[portfolio.model.eq("fusion_50_50") & portfolio.ema.eq(.3) &
+                                  portfolio.horizon.isin([5,10]) & portfolio.tc_setting.eq("match_execution_fee"),
+                                  ["horizon","fee_bps",*metrics]]
+        optimizer = portfolio.loc[portfolio.tc_setting.str.startswith("fixed_")].merge(
+            reference,on=["horizon","fee_bps"],suffixes=("","_reference"),validate="many_to_one")
+        for name in metrics:
+            optimizer[f"{name}_change"] = optimizer[name]-optimizer[f"{name}_reference"]
+        save(optimizer,root/"optimizer_grid_comparison.csv")
     eligible = paired.loc[paired.passes_step3_checks & paired.horizon.isin([10,20])]
-    status = {"status":"go" if not eligible.empty else "no_go","variants":len(portfolio),
+    status = {"status":"go" if not eligible.empty else "no_go","variants":len(portfolio),"optimizer_grid_variants":int(is_grid.sum()),
               "corporate_action_keys_requiring_review":len(issue_keys),
               "terminal_stale_codes_requiring_review":int(terminal.code.nunique()),
               "all_ledgers_verified":bool(portfolio.ledger_verified.all()),
