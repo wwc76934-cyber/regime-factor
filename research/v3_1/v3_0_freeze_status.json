@@ -1,0 +1,8 @@
+{
+  "status": "withdrawn",
+  "registration": "../v3/freeze_registration_2026.json",
+  "configuration_sha256": "bad88526cb14ca7ee88bef97705d89b1bf2c83d7dc7a4973507ab4941bc86d29",
+  "effective_date": "2026-11-22",
+  "reason": "V3.1 development and acceptance gate precede the next registration",
+  "protected_period": ["2026-01-01", "2026-11-13"]
+}

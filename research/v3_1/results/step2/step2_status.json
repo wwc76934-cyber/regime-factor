@@ -1,0 +1,21 @@
+{
+  "status": "go",
+  "eligible_development_variants": [
+    "v3_1_lgb_huber_h10",
+    "v3_1_lgb_huber_h20",
+    "v3_1_lgb_huber_h5",
+    "v3_1_state_ridge_h10",
+    "v3_1_state_ridge_h20",
+    "v3_1_state_ridge_h5"
+  ],
+  "eligible_primary_h10_models": [
+    "v3_1_lgb_huber",
+    "v3_1_state_ridge"
+  ],
+  "thresholds": {
+    "top30_hit": ">0.10",
+    "rank_ic": ">0.03",
+    "top30_excess_H00300": ">0"
+  },
+  "realized_beta_definition": "Cov of holding-period gross top30 and H00300 returns / H00300 variance"
+}

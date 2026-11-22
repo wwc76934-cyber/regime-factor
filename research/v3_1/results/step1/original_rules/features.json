@@ -1,0 +1,31 @@
+{
+  "status": "no_go",
+  "selected": [],
+  "directions": {},
+  "quota": {
+    "fast": 2,
+    "trend": 2,
+    "value": 2
+  },
+  "qualified_counts": {
+    "fast": 2,
+    "trend": 1,
+    "value": 0
+  },
+  "provisional_only": [
+    "RET_5",
+    "CORR_PV_10",
+    "MOM_120_SKIP20"
+  ],
+  "horizons": [
+    5,
+    10,
+    20
+  ],
+  "states": [
+    "market_return_20d",
+    "market_volatility_20d",
+    "market_breadth_20d",
+    "tier_vol_spread_20d"
+  ]
+}

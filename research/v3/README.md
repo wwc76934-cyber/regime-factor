@@ -1,6 +1,6 @@
 # V3 数据工程和研究边界
 
-V3 代码和研究产物位于 scripts/v3 与 research/v3。2015–2025 开发数据已审计，滚动模型和组合消融已完成。2026 保留段使用独立缓存，先冻结，再由项目作者联网采集。
+V3 代码和研究产物位于 scripts/v3 与 research/v3。2015–2025 开发数据已审计，滚动模型和组合消融已完成。V3.0 的 2026 冻结登记已撤回，原登记与开发结果留档。后续研究进入 [V3.1](../v3_1/README.md)。
 
 ## 第一次只跑小样本探测
 
@@ -37,17 +37,10 @@ cd D:\QuantProjects\regime-factor
 4. Step 4：优化器约束的是模型估计的目标 Beta。成交后重新审计股数、换手和暴露，不能保证实现 Beta 精确达标。
 5. Step 5：冻结模型和成本参数后才读隔离的 2026 评价数据。本项目曾为 V1 前向尝试下载过一部分 2026 行情，因此发布时称“V3 参数冻结后的保留段评价”，不声称整个团队从未接触过 2026 数据。
 
-## 2026 保留段的数据交接
+## 2026 冻结登记状态
 
-[开发报告](DEVELOPMENT_REPORT.md) 汇总了因子与交易消融。[冻结登记](freeze_registration_2026.json) 已核验，包括 22 条模型、执行方式与费率的组合。
+[原 V3.0 冻结登记](freeze_registration_2026.json)于 2026-11-22 撤回，作为历史记录保留。此前的 V3.0 数据采集交接随该登记撤回。开发状态见 [V3.1 说明](../v3_1/README.md)和[撤回记录](../v3_1/v3_0_freeze_status.json)。
 
-采集时在项目根目录运行：
-
-```powershell
-.\.venv\Scripts\python.exe -B .\scripts\v3\run_v3_evaluation_and_holdout_2026.py download --project-root .
-```
-
-采集命令写入 data\raw\v3\holdout_2026，可原样重跑以跳过已缓存的分区。若中证指数接口需要单独手动处理，可用 --benchmark-csv 指定已核验的 date,csi300 格式文件。命令结束时会打印 Download complete。随后使用同一脚本的 prepare 与 evaluate 子命令进行离线审计和冻结评价，最后生成基于信号日收盘的拟议目标权重与调仓订单。
 ## GitHub 发布内容与冻结复现
 
 仓库发布脚本、开发报告、汇总表、净值图和原始冻结登记。原始行情、预测 Parquet 及逐笔模拟账本保存在本地。冻结核验按原始字节校验，运行时需要原开发环境及登记对应的本地研究产物。若在独立副本中恢复冻结环境，[指数读取依赖快照](reproduction/fetch_csi300_total_return.py) 对应登记中的 scripts/fetch_csi300_total_return.py。V1 的仓库版本保留其独立的评估入口。

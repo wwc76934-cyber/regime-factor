@@ -1,0 +1,7 @@
+{
+  "development_max_date": "2025-12-31",
+  "early_h00300_missing_sessions": 0,
+  "valuation_partitions_missing": 0,
+  "valuation_partitions_expected": 3746,
+  "data_collection_required": false
+}

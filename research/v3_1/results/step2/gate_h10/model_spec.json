@@ -1,0 +1,12 @@
+{
+  "horizon": 10,
+  "backend": "numpy",
+  "epoch_limit": 5,
+  "validation_weeks": 12,
+  "patience": 2,
+  "batch_weeks": 16,
+  "refit_weeks": 4,
+  "mse_weight": 0.15,
+  "optimizer": "AdamW",
+  "initialization": "cold_each_refit"
+}

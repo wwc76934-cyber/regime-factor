@@ -1,0 +1,64 @@
+{
+  "status": "go",
+  "selected": [
+    "CORR_PV_10",
+    "RET_5",
+    "MOM_120_SKIP20",
+    "HIGH_52W_PROX",
+    "SP_TTM",
+    "EP_TTM"
+  ],
+  "directions": {
+    "CORR_PV_10": -1,
+    "RET_5": -1,
+    "MOM_120_SKIP20": 1,
+    "HIGH_52W_PROX": 1,
+    "SP_TTM": 1,
+    "EP_TTM": 1
+  },
+  "quota": {
+    "fast": 2,
+    "trend": 2,
+    "value": 2
+  },
+  "qualified_counts": {
+    "fast": 2,
+    "trend": 2,
+    "value": 3
+  },
+  "provisional_only": [],
+  "horizons": [
+    5,
+    10,
+    20
+  ],
+  "states": [
+    "market_return_20d",
+    "market_volatility_20d",
+    "market_breadth_20d",
+    "tier_vol_spread_20d",
+    "value_minus_trend_60d"
+  ],
+  "selection_end": "2022-12-31",
+  "max_abs_median_spearman": 0.6292011783192474,
+  "style_missing_rate": 0.02491103202846975,
+  "style_missing_rate_2015_2022": 0.034229828850855744,
+  "provisional_7f": [
+    "CORR_PV_10",
+    "RET_5",
+    "MOM_120_SKIP20",
+    "HIGH_52W_PROX",
+    "SP_TTM",
+    "EP_TTM",
+    "TURN_20"
+  ],
+  "provisional_7f_directions": {
+    "CORR_PV_10": -1,
+    "RET_5": -1,
+    "MOM_120_SKIP20": 1,
+    "HIGH_52W_PROX": 1,
+    "SP_TTM": 1,
+    "EP_TTM": 1,
+    "TURN_20": -1
+  }
+}

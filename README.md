@@ -34,9 +34,15 @@
 
 ## V3 长周期研究
 
-V3 将开发样本扩展至 2015–2025 年，增加市场调整收益标签、LambdaRank、市场门控网络与带 Beta 约束的组合优化。已完成开发期消融和 2026 年保留段登记，2026 评价有待采集。
+V3 将开发样本扩展至 2015–2025 年，增加市场调整收益标签、LambdaRank、市场门控网络与带 Beta 约束的组合优化。已完成开发期消融。原 V3.0 的 2026 冻结登记已撤回并归档。
 
-[开发报告](research/v3/DEVELOPMENT_REPORT.md) · [本地流程](research/v3/README.md) · [2026 冻结登记](research/v3/freeze_registration_2026.json)
+[开发报告](research/v3/DEVELOPMENT_REPORT.md) · [本地流程](research/v3/README.md) · [V3.0 历史登记](research/v3/freeze_registration_2026.json)
+
+## V3.1 指数增强研究进展
+
+已完成开发数据审计、分层六因子筛选、60 日价值相对趋势状态，以及 5、10、20 日滚动模型对照。状态 Ridge 和 Huber LightGBM 通过 Step 2 信号门槛。组合优化、扣费回测及 2026 保留段评价进入后续阶段。
+
+[运行说明](research/v3_1/README.md) · [因子与风格审计](research/v3_1/results/step1/REVIEW.md) · [滚动模型结果](research/v3_1/results/step2/REVIEW.md)
 
 ## 本地运行
 
