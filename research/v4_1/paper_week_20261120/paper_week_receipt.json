@@ -1,0 +1,20 @@
+{
+  "generated_utc": "2026-11-23T08:27:16.986060+00:00",
+  "signal_as_of": "2026-11-20",
+  "indicative_execution_date": "2026-11-23",
+  "last_observed_quote": "2026-11-20",
+  "holdout_seal_sha256": "92ec3b2765a8105fdd8e8ec82c3dda9059d523a05d2477e19adaa083255cd84b",
+  "input_receipt_sha256": "7e828f7f14f6b2cf8b6c2b9cb38753cf7d9c3a104771cb6a3dc92f372f777980",
+  "csv_sha256": {
+    "account_summary.csv": "0fe68e644691ae47df3a2417b7087b96d64c48063e87d6b8ef6935b181fe2f89",
+    "company_actions.csv": "578974407d27e425abf880bae735677744a8090e023dbda32876756cca19c2c1",
+    "gate_weights.csv": "b7751fa90cad96a8b99d417a00bbd2e33c5cfdeb35c6bc71da305328d1f9c28c",
+    "indicative_orders.csv": "a326394338c64fc275445f4786069a77478bebcb8541cd12e8a48b061c9feb5b",
+    "market_state.csv": "cea10c48635de49f42d289d18e02c6e4393357e40f62d2832c7d0ac29e80a67c",
+    "target_positions.csv": "40c7d7f99391fd3c496443ed0cf6319565039e63bffdea2945504c405e95a8c6",
+    "week_actions.csv": "32793ef1c2391a6e8a156b1cc332dd304cde6ac86bdb72b45e3a8f387c7c85fa",
+    "week_holdings.csv": "d89f677e2ad8ab1f7020e3ea1f3859945d9703dd9e77f627e1810d3057005a93",
+    "week_nav.csv": "35460d83a567a4bc4386be1c8632ec97de10e7838d76d91af738acd4d5990271",
+    "week_orders.csv": "b775d1890c4dae2069d84a63f3e0192745b6979e9b9318c771905be312776a5a"
+  }
+}

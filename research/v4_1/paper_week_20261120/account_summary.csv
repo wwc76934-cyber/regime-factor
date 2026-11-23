@@ -1,0 +1,5 @@
+﻿model,fee_bps,signal_date,planned_execution,regime,beta_low,beta_high,prior_equity,prior_cash,prior_positions,continuous_names,indicative_positions,buys,sells
+v3_1_champion,10,2026-11-20,2026-11-23,defensive,0.82,0.92,2145489.44,1829.79,56,56,53,5,12
+v3_1_champion,20,2026-11-20,2026-11-23,defensive,0.82,0.92,2044324.58,1532.83,53,55,51,7,11
+v4_1_moe_huber,10,2026-11-20,2026-11-23,defensive,0.95,1.05,2186578.68,1646.98,52,52,49,11,16
+v4_1_moe_huber,20,2026-11-20,2026-11-23,defensive,0.95,1.05,1990755.46,2114.39,50,50,47,12,17

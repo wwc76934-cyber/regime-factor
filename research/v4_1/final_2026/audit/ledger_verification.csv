@@ -1,0 +1,5 @@
+﻿model,fee_bps,sessions,fills,action_entries,unresolved,terminal_stale,carry_in_verified,all_ledgers_verified
+v3_1_champion,10,208,460,202,0,0,True,True
+v3_1_champion,20,208,421,198,0,0,True,True
+v4_1_moe_huber,10,208,526,188,0,0,True,True
+v4_1_moe_huber,20,208,497,190,0,0,True,True

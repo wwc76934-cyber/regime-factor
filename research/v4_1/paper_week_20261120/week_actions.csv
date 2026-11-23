@@ -1,0 +1,9 @@
+﻿strategy,date,code,ex_date,stage,amount,shares,fraction,fee_bps
+v3_1_champion,2026-11-20,sh.601998,2026-11-20,cash_receivable,1299.2,0,0,10
+v3_1_champion,2026-11-20,sh.601998,2026-11-20,cash_paid,1299.2,0,0,10
+v3_1_champion,2026-11-20,sh.601998,2026-11-20,cash_receivable,1238.3,0,0,20
+v3_1_champion,2026-11-20,sh.601998,2026-11-20,cash_paid,1238.3,0,0,20
+v4_1_moe_huber,2026-11-20,sh.601998,2026-11-20,cash_receivable,1319.5,0,0,10
+v4_1_moe_huber,2026-11-20,sh.601998,2026-11-20,cash_paid,1319.5,0,0,10
+v4_1_moe_huber,2026-11-20,sh.601998,2026-11-20,cash_receivable,1218.0,0,0,20
+v4_1_moe_huber,2026-11-20,sh.601998,2026-11-20,cash_paid,1218.0,0,0,20

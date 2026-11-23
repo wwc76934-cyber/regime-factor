@@ -1,0 +1,7 @@
+﻿code,ex_date,category,reason
+sh.601059,2026-10-19,delisting,Verify exit settlement if held
+sz.300760,2026-05-28,terms,"dividCashPsBeforeTax 金额或比例冲突：[Decimal('0.31'), Decimal('1.25')]"
+sz.301308,2026-06-02,terms,"dividCashPsBeforeTax 金额或比例冲突：[Decimal('0.34676'), Decimal('0.643984')]"
+sh.600930,2026-02-11,reference_gap,-0.03000000000000025
+sh.603288,2026-02-06,reference_gap,-0.30000000000000426
+sz.000538,2026-09-24,reference_gap,-1.0399999999999991

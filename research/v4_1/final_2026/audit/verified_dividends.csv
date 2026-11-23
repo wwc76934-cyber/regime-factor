@@ -1,0 +1,6 @@
+﻿code,record_date,ex_date,cash_per_share,source,pay_date,stock_listing_date,bonus_shares_per_share,reserve_shares_per_share,event_type,source_rows
+sh.600930,2026-02-10,2026-02-11,0.03,https://static.cninfo.com.cn/finalpage/2026-02-04/1224964356.PDF,2026-02-11,,0,0,cash_only,1
+sh.603288,2026-02-05,2026-02-06,0.30,https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0130/2026013001658_c.pdf,2026-02-06,,0,0,cash_only,1
+sz.300760,2026-05-27,2026-05-28,1.56,https://static.cninfo.com.cn/finalpage/2026-05-20/1225320390.PDF,2026-05-28,,0,0,cash_only,1
+sz.301308,2026-06-01,2026-06-02,0.9907442,https://static.cninfo.com.cn/finalpage/2026-05-26/1225331662.PDF,2026-06-02,,0,0,cash_only,1
+sz.000538,2026-09-23,2026-09-24,1.038,https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-09-17/60be8b82-bfcd-4d39-a079-a05d3e50b7b7.PDF,2026-09-24,,0,0,cash_only,1
