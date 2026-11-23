@@ -1,0 +1,11 @@
+{
+  "stage": "development_complete_pending_review",
+  "accounts": 10,
+  "all_ledgers_verified": true,
+  "highest_development_ir_v41": {
+    "model": "v4_1_moe_huber",
+    "policy": "static",
+    "ir": 0.6437434315695344
+  },
+  "holdout_opened": false
+}

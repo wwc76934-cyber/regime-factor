@@ -1,0 +1,31 @@
+{
+  "factors": [
+    "RET_5",
+    "CORR_PV_10",
+    "MOM_120_SKIP20",
+    "HIGH_52W_PROX",
+    "EP_TTM",
+    "SP_TTM"
+  ],
+  "model_parameters": 759,
+  "temperature": 1.5,
+  "seeds": [
+    42,
+    1024,
+    2026,
+    777,
+    999
+  ],
+  "epochs": 25,
+  "refits": 39,
+  "prediction_weeks": 460,
+  "seed_fits": 195,
+  "matched_prediction_rows": 136451,
+  "reproduced_scores": true,
+  "exact_masked_icir_loss_and_gradient": true,
+  "min_train": 76,
+  "max_train": 532,
+  "first_training_signal": "2015-07-03",
+  "max_prediction_date": "2025-12-26",
+  "torch_version": "2.15.0+cpu"
+}
