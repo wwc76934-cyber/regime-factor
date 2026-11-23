@@ -1,0 +1,13 @@
+{
+  "status": "no_go",
+  "checks": {
+    "rank_ic_gte_0.04": false,
+    "top30_hit_gte_12pct": false,
+    "ridge_mean_rho_lt_0.65": true,
+    "huber_mean_rho_lt_0.65": true
+  },
+  "development_end": "2025-12-31",
+  "forecast_weeks": 460,
+  "validated_signal_weeks": 459,
+  "full_refits": 39
+}

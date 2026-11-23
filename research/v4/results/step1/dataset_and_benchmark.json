@@ -1,0 +1,184 @@
+{
+  "shape": [
+    562,
+    300,
+    20,
+    7
+  ],
+  "channels": [
+    "ret_1d",
+    "rel_ret_1d",
+    "intraday_ret",
+    "hl_range",
+    "close_pos",
+    "log_vol_ratio",
+    "turn_z"
+  ],
+  "first_signal": "2015-01-09",
+  "last_signal": "2025-12-26",
+  "missing_by_channel": {
+    "ret_1d": 0.01927313167259781,
+    "rel_ret_1d": 0.02219602609727167,
+    "intraday_ret": 0.018959964412811336,
+    "hl_range": 0.018959964412811336,
+    "close_pos": 0.018959964412811336,
+    "log_vol_ratio": 0.01976868327402137,
+    "turn_z": 0.018959964412811336
+  },
+  "missing_labels": 0.026215895610913406,
+  "complete_state_weeks": 548,
+  "all_weeks_chronology": true,
+  "random_date_checks": [
+    {
+      "signal": "2015-12-04",
+      "last_input": "2015-12-04",
+      "label_exit": "2015-12-14"
+    },
+    {
+      "signal": "2015-12-18",
+      "last_input": "2015-12-18",
+      "label_exit": "2015-12-28"
+    },
+    {
+      "signal": "2016-01-08",
+      "last_input": "2016-01-08",
+      "label_exit": "2016-01-18"
+    },
+    {
+      "signal": "2017-03-17",
+      "last_input": "2017-03-17",
+      "label_exit": "2017-03-27"
+    },
+    {
+      "signal": "2019-09-20",
+      "last_input": "2019-09-20",
+      "label_exit": "2019-09-30"
+    },
+    {
+      "signal": "2019-10-11",
+      "last_input": "2019-10-11",
+      "label_exit": "2019-10-21"
+    },
+    {
+      "signal": "2022-01-28",
+      "last_input": "2022-01-28",
+      "label_exit": "2022-02-14"
+    },
+    {
+      "signal": "2022-08-12",
+      "last_input": "2022-08-12",
+      "label_exit": "2022-08-22"
+    },
+    {
+      "signal": "2023-05-19",
+      "last_input": "2023-05-19",
+      "label_exit": "2023-05-29"
+    },
+    {
+      "signal": "2024-05-24",
+      "last_input": "2024-05-24",
+      "label_exit": "2024-06-03"
+    }
+  ],
+  "index_first": "2015-01-05",
+  "states": [
+    "market_return_20d",
+    "market_volatility_20d",
+    "market_breadth_20d",
+    "tier_vol_spread_20d",
+    "value_minus_trend_60d"
+  ],
+  "cache_sha256": "a8f88b582188580ee54e6f5ca51e4a9e67408a138a1eb19ae7bdc69ef29c0daf",
+  "torch_version": "2.15.0+cpu",
+  "device": "cpu",
+  "threads": 4,
+  "seeds": [
+    42,
+    1024,
+    2026
+  ],
+  "forecast_weeks": 460,
+  "benchmarks": [
+    {
+      "dim": 24,
+      "batch_size": 16,
+      "parameters": 5733,
+      "refit_signal": "2017-01-06",
+      "training_weeks": 69,
+      "purged_weeks": 2,
+      "validation_weeks": 16,
+      "last_training_exit": "2016-08-22",
+      "first_validation_signal": "2016-09-02",
+      "last_validation_exit": "2017-01-03",
+      "seeds": [
+        {
+          "seed": 42,
+          "epochs": 35,
+          "best_epoch": 29,
+          "validation_ic": 0.08606748281212398,
+          "seconds": 32.274384499993175
+        },
+        {
+          "seed": 1024,
+          "epochs": 11,
+          "best_epoch": 5,
+          "validation_ic": 0.07584636182721072,
+          "seconds": 9.777402899999288
+        },
+        {
+          "seed": 2026,
+          "epochs": 9,
+          "best_epoch": 3,
+          "validation_ic": 0.09978092276901995,
+          "seconds": 8.276277900004061
+        }
+      ],
+      "measured_three_seed_seconds": 50.328065299996524,
+      "refits": 39,
+      "projected_minutes_same_quarter": 32.71324244499774,
+      "projected_minutes_scaled_train_batches": 89.91947666932712
+    },
+    {
+      "dim": 16,
+      "batch_size": 32,
+      "parameters": 3001,
+      "refit_signal": "2017-01-06",
+      "training_weeks": 69,
+      "purged_weeks": 2,
+      "validation_weeks": 16,
+      "last_training_exit": "2016-08-22",
+      "first_validation_signal": "2016-09-02",
+      "last_validation_exit": "2017-01-03",
+      "seeds": [
+        {
+          "seed": 42,
+          "epochs": 14,
+          "best_epoch": 8,
+          "validation_ic": 0.0737950312534819,
+          "seconds": 10.56716019999294
+        },
+        {
+          "seed": 1024,
+          "epochs": 14,
+          "best_epoch": 8,
+          "validation_ic": 0.05753853749795873,
+          "seconds": 10.541788200003793
+        },
+        {
+          "seed": 2026,
+          "epochs": 28,
+          "best_epoch": 22,
+          "validation_ic": 0.06385401162116099,
+          "seconds": 21.064047300009406
+        }
+      ],
+      "measured_three_seed_seconds": 42.17299570000614,
+      "refits": 39,
+      "projected_minutes_same_quarter": 27.412447205003993,
+      "projected_minutes_scaled_train_batches": 63.728082391120395
+    }
+  ],
+  "within_15_minute_budget": false,
+  "selected_dim": 16,
+  "selected_batch_size": 32
+}

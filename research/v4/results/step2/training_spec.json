@@ -1,0 +1,18 @@
+{
+  "cache": "a8f88b582188580ee54e6f5ca51e4a9e67408a138a1eb19ae7bdc69ef29c0daf",
+  "seeds": [
+    42,
+    1024,
+    2026
+  ],
+  "dim": 16,
+  "batch": 32,
+  "cpu_threads": 4,
+  "torch_version": "2.15.0+cpu",
+  "ablation_refit": "first",
+  "sources": {
+    "train_v4_deep_model.py": "68a7afa3af96817cdbdc2a0db14ddaf78929f403b0ef56b86de022df4db47ec7",
+    "benchmark_v4_cpu.py": "86cd84091a62abe20e04318510b9fcede5980ef92802c4f8412371e878dc51db",
+    "v4_tcsa_mgg_model.py": "fd018d4c3c7070be29391af0935ffd190e59fbbd2876c2e3bff9fb8b0a0dea64"
+  }
+}

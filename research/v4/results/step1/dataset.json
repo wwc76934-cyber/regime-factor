@@ -1,0 +1,91 @@
+{
+  "shape": [
+    562,
+    300,
+    20,
+    7
+  ],
+  "channels": [
+    "ret_1d",
+    "rel_ret_1d",
+    "intraday_ret",
+    "hl_range",
+    "close_pos",
+    "log_vol_ratio",
+    "turn_z"
+  ],
+  "first_signal": "2015-01-09",
+  "last_signal": "2025-12-26",
+  "missing_by_channel": {
+    "ret_1d": 0.01927313167259781,
+    "rel_ret_1d": 0.02219602609727167,
+    "intraday_ret": 0.018959964412811336,
+    "hl_range": 0.018959964412811336,
+    "close_pos": 0.018959964412811336,
+    "log_vol_ratio": 0.01976868327402137,
+    "turn_z": 0.018959964412811336
+  },
+  "missing_labels": 0.026215895610913406,
+  "complete_state_weeks": 548,
+  "all_weeks_chronology": true,
+  "random_date_checks": [
+    {
+      "signal": "2015-12-04",
+      "last_input": "2015-12-04",
+      "label_exit": "2015-12-14"
+    },
+    {
+      "signal": "2015-12-18",
+      "last_input": "2015-12-18",
+      "label_exit": "2015-12-28"
+    },
+    {
+      "signal": "2016-01-08",
+      "last_input": "2016-01-08",
+      "label_exit": "2016-01-18"
+    },
+    {
+      "signal": "2017-03-17",
+      "last_input": "2017-03-17",
+      "label_exit": "2017-03-27"
+    },
+    {
+      "signal": "2019-09-20",
+      "last_input": "2019-09-20",
+      "label_exit": "2019-09-30"
+    },
+    {
+      "signal": "2019-10-11",
+      "last_input": "2019-10-11",
+      "label_exit": "2019-10-21"
+    },
+    {
+      "signal": "2022-01-28",
+      "last_input": "2022-01-28",
+      "label_exit": "2022-02-14"
+    },
+    {
+      "signal": "2022-08-12",
+      "last_input": "2022-08-12",
+      "label_exit": "2022-08-22"
+    },
+    {
+      "signal": "2023-05-19",
+      "last_input": "2023-05-19",
+      "label_exit": "2023-05-29"
+    },
+    {
+      "signal": "2024-05-24",
+      "last_input": "2024-05-24",
+      "label_exit": "2024-06-03"
+    }
+  ],
+  "index_first": "2015-01-05",
+  "states": [
+    "market_return_20d",
+    "market_volatility_20d",
+    "market_breadth_20d",
+    "tier_vol_spread_20d",
+    "value_minus_trend_60d"
+  ]
+}

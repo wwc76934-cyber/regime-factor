@@ -1,0 +1,19 @@
+{
+  "weekly_keys_checked": 168600,
+  "signal_weeks": 562,
+  "labels_match_v31_h5": true,
+  "all_missing_features_zero": true,
+  "all_windows_end_on_signal": true,
+  "independent_raw_intraday_and_universe_checks": [
+    "2015-12-04",
+    "2015-12-18",
+    "2016-01-08",
+    "2017-03-17",
+    "2019-09-20",
+    "2019-10-11",
+    "2022-01-28",
+    "2022-08-12",
+    "2023-05-19",
+    "2024-05-24"
+  ]
+}
