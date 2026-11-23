@@ -1,0 +1,2873 @@
+{
+  "registered_utc": "2026-11-23T07:01:34.293911+00:00",
+  "configuration_sha256": "a58c63318c47203ea53016484aa136c74b1a2cf1bb318638c6c35ea876688a7a",
+  "configuration": {
+    "parent_development_commit": "637ecfd4c56e487bfa79f51dad093889d8294a71",
+    "study": "CSI300 final paired holdout",
+    "period": [
+      "2026-01-01",
+      "2026-11-13"
+    ],
+    "development_end": "2025-12-31",
+    "benchmarks": [
+      "H00300",
+      "FloatMV",
+      "CSI300_EW"
+    ],
+    "official_benchmark": "H00300",
+    "accounts": [
+      {
+        "role": "baseline",
+        "model": "v3_1_champion",
+        "policy": "dynamic",
+        "fee_bps": 10,
+        "development_run": "research/v4_1/results/step3/v3_1_champion/10bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_10bp_tc20_risk15_active0.02",
+        "anchor_date": "2025-12-31",
+        "last_execution_date": "2025-12-30",
+        "sessions_since_execution": 1,
+        "end_balances": {
+          "equity": 2423344.62,
+          "cash": 1039.12,
+          "stock_value": 2422305.5,
+          "pending_value": 0.0,
+          "dividends_due": 0.0,
+          "rights_prepaid": 0.0
+        },
+        "holdings": [
+          {
+            "code": "sh.600015",
+            "shares": 5500,
+            "locked_shares": 0,
+            "mark": 6.87,
+            "value": 37785.0
+          },
+          {
+            "code": "sh.600036",
+            "shares": 1800,
+            "locked_shares": 0,
+            "mark": 42.1,
+            "value": 75780.0
+          },
+          {
+            "code": "sh.600066",
+            "shares": 900,
+            "locked_shares": 0,
+            "mark": 32.7,
+            "value": 29430.0
+          },
+          {
+            "code": "sh.600089",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 22.22,
+            "value": 4444.0
+          },
+          {
+            "code": "sh.600160",
+            "shares": 700,
+            "locked_shares": 0,
+            "mark": 38.42,
+            "value": 26894.0
+          },
+          {
+            "code": "sh.600183",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 71.41,
+            "value": 14282.0
+          },
+          {
+            "code": "sh.600219",
+            "shares": 9500,
+            "locked_shares": 0,
+            "mark": 5.38,
+            "value": 51110.0
+          },
+          {
+            "code": "sh.600362",
+            "shares": 900,
+            "locked_shares": 0,
+            "mark": 54.92,
+            "value": 49428.0
+          },
+          {
+            "code": "sh.600426",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 31.43,
+            "value": 9429.0
+          },
+          {
+            "code": "sh.600519",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 1377.18,
+            "value": 137718.0
+          },
+          {
+            "code": "sh.600919",
+            "shares": 4100,
+            "locked_shares": 0,
+            "mark": 10.4,
+            "value": 42640.0
+          },
+          {
+            "code": "sh.600926",
+            "shares": 2500,
+            "locked_shares": 0,
+            "mark": 15.28,
+            "value": 38200.0
+          },
+          {
+            "code": "sh.601009",
+            "shares": 4700,
+            "locked_shares": 0,
+            "mark": 11.43,
+            "value": 53721.0
+          },
+          {
+            "code": "sh.601077",
+            "shares": 2900,
+            "locked_shares": 0,
+            "mark": 6.46,
+            "value": 18734.0
+          },
+          {
+            "code": "sh.601138",
+            "shares": 600,
+            "locked_shares": 0,
+            "mark": 62.05,
+            "value": 37230.0
+          },
+          {
+            "code": "sh.601166",
+            "shares": 2600,
+            "locked_shares": 0,
+            "mark": 21.06,
+            "value": 54756.0
+          },
+          {
+            "code": "sh.601169",
+            "shares": 6600,
+            "locked_shares": 0,
+            "mark": 5.48,
+            "value": 36168.0
+          },
+          {
+            "code": "sh.601229",
+            "shares": 2200,
+            "locked_shares": 0,
+            "mark": 10.1,
+            "value": 22220.0
+          },
+          {
+            "code": "sh.601288",
+            "shares": 12600,
+            "locked_shares": 0,
+            "mark": 7.68,
+            "value": 96768.0
+          },
+          {
+            "code": "sh.601318",
+            "shares": 1200,
+            "locked_shares": 0,
+            "mark": 68.4,
+            "value": 82080.0
+          },
+          {
+            "code": "sh.601319",
+            "shares": 6800,
+            "locked_shares": 0,
+            "mark": 8.95,
+            "value": 60860.0
+          },
+          {
+            "code": "sh.601328",
+            "shares": 6600,
+            "locked_shares": 0,
+            "mark": 7.25,
+            "value": 47850.0
+          },
+          {
+            "code": "sh.601336",
+            "shares": 800,
+            "locked_shares": 0,
+            "mark": 69.7,
+            "value": 55760.0
+          },
+          {
+            "code": "sh.601398",
+            "shares": 7200,
+            "locked_shares": 0,
+            "mark": 7.93,
+            "value": 57096.0
+          },
+          {
+            "code": "sh.601600",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 12.22,
+            "value": 2444.0
+          },
+          {
+            "code": "sh.601601",
+            "shares": 1400,
+            "locked_shares": 0,
+            "mark": 41.91,
+            "value": 58674.0
+          },
+          {
+            "code": "sh.601628",
+            "shares": 1700,
+            "locked_shares": 0,
+            "mark": 45.5,
+            "value": 77350.0
+          },
+          {
+            "code": "sh.601669",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 5.2,
+            "value": 520.0
+          },
+          {
+            "code": "sh.601818",
+            "shares": 2400,
+            "locked_shares": 0,
+            "mark": 3.49,
+            "value": 8376.0
+          },
+          {
+            "code": "sh.601825",
+            "shares": 3400,
+            "locked_shares": 0,
+            "mark": 9.29,
+            "value": 31586.0
+          },
+          {
+            "code": "sh.601838",
+            "shares": 1600,
+            "locked_shares": 0,
+            "mark": 16.12,
+            "value": 25792.0
+          },
+          {
+            "code": "sh.601857",
+            "shares": 2900,
+            "locked_shares": 0,
+            "mark": 10.41,
+            "value": 30189.0
+          },
+          {
+            "code": "sh.601872",
+            "shares": 400,
+            "locked_shares": 0,
+            "mark": 8.98,
+            "value": 3592.0
+          },
+          {
+            "code": "sh.601881",
+            "shares": 1100,
+            "locked_shares": 0,
+            "mark": 15.72,
+            "value": 17292.0
+          },
+          {
+            "code": "sh.601919",
+            "shares": 3500,
+            "locked_shares": 0,
+            "mark": 15.18,
+            "value": 53130.0
+          },
+          {
+            "code": "sh.601988",
+            "shares": 2800,
+            "locked_shares": 0,
+            "mark": 5.73,
+            "value": 16044.0
+          },
+          {
+            "code": "sh.601998",
+            "shares": 6200,
+            "locked_shares": 0,
+            "mark": 7.7,
+            "value": 47740.0
+          },
+          {
+            "code": "sh.603259",
+            "shares": 400,
+            "locked_shares": 0,
+            "mark": 90.64,
+            "value": 36256.0
+          },
+          {
+            "code": "sh.603296",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 90.74,
+            "value": 27222.0
+          },
+          {
+            "code": "sh.603993",
+            "shares": 3300,
+            "locked_shares": 0,
+            "mark": 20.0,
+            "value": 66000.0
+          },
+          {
+            "code": "sh.605117",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 86.2,
+            "value": 17240.0
+          },
+          {
+            "code": "sh.688008",
+            "shares": 116,
+            "locked_shares": 0,
+            "mark": 117.8,
+            "value": 13664.8
+          },
+          {
+            "code": "sh.688981",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 122.83,
+            "value": 24566.0
+          },
+          {
+            "code": "sz.000333",
+            "shares": 500,
+            "locked_shares": 0,
+            "mark": 78.15,
+            "value": 39075.0
+          },
+          {
+            "code": "sz.000408",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 84.4,
+            "value": 25320.0
+          },
+          {
+            "code": "sz.000425",
+            "shares": 4300,
+            "locked_shares": 0,
+            "mark": 11.58,
+            "value": 49794.0
+          },
+          {
+            "code": "sz.000617",
+            "shares": 1100,
+            "locked_shares": 0,
+            "mark": 9.6,
+            "value": 10560.0
+          },
+          {
+            "code": "sz.000630",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 6.01,
+            "value": 1803.0
+          },
+          {
+            "code": "sz.000708",
+            "shares": 3300,
+            "locked_shares": 0,
+            "mark": 16.37,
+            "value": 54021.0
+          },
+          {
+            "code": "sz.000776",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 22.02,
+            "value": 4404.0
+          },
+          {
+            "code": "sz.000807",
+            "shares": 1800,
+            "locked_shares": 0,
+            "mark": 32.84,
+            "value": 59112.0
+          },
+          {
+            "code": "sz.000938",
+            "shares": 800,
+            "locked_shares": 0,
+            "mark": 24.6,
+            "value": 19680.0
+          },
+          {
+            "code": "sz.000963",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 39.45,
+            "value": 7890.0
+          },
+          {
+            "code": "sz.002028",
+            "shares": 400,
+            "locked_shares": 0,
+            "mark": 154.59,
+            "value": 61836.0
+          },
+          {
+            "code": "sz.002142",
+            "shares": 1800,
+            "locked_shares": 0,
+            "mark": 28.09,
+            "value": 50562.0
+          },
+          {
+            "code": "sz.002384",
+            "shares": 600,
+            "locked_shares": 0,
+            "mark": 84.65,
+            "value": 50790.0
+          },
+          {
+            "code": "sz.002916",
+            "shares": 130,
+            "locked_shares": 0,
+            "mark": 232.29,
+            "value": 30197.7
+          },
+          {
+            "code": "sz.002938",
+            "shares": 600,
+            "locked_shares": 0,
+            "mark": 50.58,
+            "value": 30348.0
+          },
+          {
+            "code": "sz.300274",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 171.04,
+            "value": 51312.0
+          },
+          {
+            "code": "sz.300308",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 610.0,
+            "value": 61000.0
+          },
+          {
+            "code": "sz.300502",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 430.88,
+            "value": 43088.0
+          },
+          {
+            "code": "sz.300750",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 367.26,
+            "value": 73452.0
+          }
+        ]
+      },
+      {
+        "role": "baseline",
+        "model": "v3_1_champion",
+        "policy": "dynamic",
+        "fee_bps": 20,
+        "development_run": "research/v4_1/results/step3/v3_1_champion/20bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_20bp_tc20_risk15_active0.02",
+        "anchor_date": "2025-12-31",
+        "last_execution_date": "2025-12-30",
+        "sessions_since_execution": 1,
+        "end_balances": {
+          "equity": 2325834.81,
+          "cash": 163.21,
+          "stock_value": 2325671.6,
+          "pending_value": 0.0,
+          "dividends_due": 0.0,
+          "rights_prepaid": 0.0
+        },
+        "holdings": [
+          {
+            "code": "sh.600015",
+            "shares": 5300,
+            "locked_shares": 0,
+            "mark": 6.87,
+            "value": 36411.0
+          },
+          {
+            "code": "sh.600036",
+            "shares": 1700,
+            "locked_shares": 0,
+            "mark": 42.1,
+            "value": 71570.0
+          },
+          {
+            "code": "sh.600066",
+            "shares": 800,
+            "locked_shares": 0,
+            "mark": 32.7,
+            "value": 26160.0
+          },
+          {
+            "code": "sh.600089",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 22.22,
+            "value": 2222.0
+          },
+          {
+            "code": "sh.600160",
+            "shares": 800,
+            "locked_shares": 0,
+            "mark": 38.42,
+            "value": 30736.0
+          },
+          {
+            "code": "sh.600183",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 71.41,
+            "value": 14282.0
+          },
+          {
+            "code": "sh.600219",
+            "shares": 9100,
+            "locked_shares": 0,
+            "mark": 5.38,
+            "value": 48958.0
+          },
+          {
+            "code": "sh.600362",
+            "shares": 900,
+            "locked_shares": 0,
+            "mark": 54.92,
+            "value": 49428.0
+          },
+          {
+            "code": "sh.600426",
+            "shares": 900,
+            "locked_shares": 0,
+            "mark": 31.43,
+            "value": 28287.0
+          },
+          {
+            "code": "sh.600519",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 1377.18,
+            "value": 137718.0
+          },
+          {
+            "code": "sh.600919",
+            "shares": 4000,
+            "locked_shares": 0,
+            "mark": 10.4,
+            "value": 41600.0
+          },
+          {
+            "code": "sh.600926",
+            "shares": 2400,
+            "locked_shares": 0,
+            "mark": 15.28,
+            "value": 36672.0
+          },
+          {
+            "code": "sh.601009",
+            "shares": 4500,
+            "locked_shares": 0,
+            "mark": 11.43,
+            "value": 51435.0
+          },
+          {
+            "code": "sh.601059",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 17.71,
+            "value": 3542.0
+          },
+          {
+            "code": "sh.601077",
+            "shares": 500,
+            "locked_shares": 0,
+            "mark": 6.46,
+            "value": 3230.0
+          },
+          {
+            "code": "sh.601138",
+            "shares": 500,
+            "locked_shares": 0,
+            "mark": 62.05,
+            "value": 31025.0
+          },
+          {
+            "code": "sh.601166",
+            "shares": 2600,
+            "locked_shares": 0,
+            "mark": 21.06,
+            "value": 54756.0
+          },
+          {
+            "code": "sh.601169",
+            "shares": 6400,
+            "locked_shares": 0,
+            "mark": 5.48,
+            "value": 35072.0
+          },
+          {
+            "code": "sh.601229",
+            "shares": 2100,
+            "locked_shares": 0,
+            "mark": 10.1,
+            "value": 21210.0
+          },
+          {
+            "code": "sh.601288",
+            "shares": 12200,
+            "locked_shares": 0,
+            "mark": 7.68,
+            "value": 93696.0
+          },
+          {
+            "code": "sh.601318",
+            "shares": 1100,
+            "locked_shares": 0,
+            "mark": 68.4,
+            "value": 75240.0
+          },
+          {
+            "code": "sh.601319",
+            "shares": 6600,
+            "locked_shares": 0,
+            "mark": 8.95,
+            "value": 59070.0
+          },
+          {
+            "code": "sh.601328",
+            "shares": 6400,
+            "locked_shares": 0,
+            "mark": 7.25,
+            "value": 46400.0
+          },
+          {
+            "code": "sh.601336",
+            "shares": 700,
+            "locked_shares": 0,
+            "mark": 69.7,
+            "value": 48790.0
+          },
+          {
+            "code": "sh.601398",
+            "shares": 6900,
+            "locked_shares": 0,
+            "mark": 7.93,
+            "value": 54717.0
+          },
+          {
+            "code": "sh.601600",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 12.22,
+            "value": 3666.0
+          },
+          {
+            "code": "sh.601601",
+            "shares": 1400,
+            "locked_shares": 0,
+            "mark": 41.91,
+            "value": 58674.0
+          },
+          {
+            "code": "sh.601628",
+            "shares": 1600,
+            "locked_shares": 0,
+            "mark": 45.5,
+            "value": 72800.0
+          },
+          {
+            "code": "sh.601818",
+            "shares": 1900,
+            "locked_shares": 0,
+            "mark": 3.49,
+            "value": 6631.0
+          },
+          {
+            "code": "sh.601825",
+            "shares": 3300,
+            "locked_shares": 0,
+            "mark": 9.29,
+            "value": 30657.0
+          },
+          {
+            "code": "sh.601838",
+            "shares": 1500,
+            "locked_shares": 0,
+            "mark": 16.12,
+            "value": 24180.0
+          },
+          {
+            "code": "sh.601857",
+            "shares": 2800,
+            "locked_shares": 0,
+            "mark": 10.41,
+            "value": 29148.0
+          },
+          {
+            "code": "sh.601872",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 8.98,
+            "value": 2694.0
+          },
+          {
+            "code": "sh.601881",
+            "shares": 900,
+            "locked_shares": 0,
+            "mark": 15.72,
+            "value": 14148.0
+          },
+          {
+            "code": "sh.601919",
+            "shares": 3400,
+            "locked_shares": 0,
+            "mark": 15.18,
+            "value": 51612.0
+          },
+          {
+            "code": "sh.601988",
+            "shares": 2700,
+            "locked_shares": 0,
+            "mark": 5.73,
+            "value": 15471.0
+          },
+          {
+            "code": "sh.601998",
+            "shares": 4300,
+            "locked_shares": 0,
+            "mark": 7.7,
+            "value": 33110.0
+          },
+          {
+            "code": "sh.603259",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 90.64,
+            "value": 18128.0
+          },
+          {
+            "code": "sh.603296",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 90.74,
+            "value": 27222.0
+          },
+          {
+            "code": "sh.603993",
+            "shares": 3200,
+            "locked_shares": 0,
+            "mark": 20.0,
+            "value": 64000.0
+          },
+          {
+            "code": "sh.605117",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 86.2,
+            "value": 25860.0
+          },
+          {
+            "code": "sh.688008",
+            "shares": 147,
+            "locked_shares": 0,
+            "mark": 117.8,
+            "value": 17316.6
+          },
+          {
+            "code": "sh.688981",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 122.83,
+            "value": 24566.0
+          },
+          {
+            "code": "sz.000333",
+            "shares": 500,
+            "locked_shares": 0,
+            "mark": 78.15,
+            "value": 39075.0
+          },
+          {
+            "code": "sz.000408",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 84.4,
+            "value": 16880.0
+          },
+          {
+            "code": "sz.000425",
+            "shares": 4100,
+            "locked_shares": 0,
+            "mark": 11.58,
+            "value": 47478.0
+          },
+          {
+            "code": "sz.000617",
+            "shares": 800,
+            "locked_shares": 0,
+            "mark": 9.6,
+            "value": 7680.0
+          },
+          {
+            "code": "sz.000630",
+            "shares": 400,
+            "locked_shares": 0,
+            "mark": 6.01,
+            "value": 2404.0
+          },
+          {
+            "code": "sz.000708",
+            "shares": 3200,
+            "locked_shares": 0,
+            "mark": 16.37,
+            "value": 52384.0
+          },
+          {
+            "code": "sz.000776",
+            "shares": 1300,
+            "locked_shares": 0,
+            "mark": 22.02,
+            "value": 28626.0
+          },
+          {
+            "code": "sz.000807",
+            "shares": 1800,
+            "locked_shares": 0,
+            "mark": 32.84,
+            "value": 59112.0
+          },
+          {
+            "code": "sz.000938",
+            "shares": 600,
+            "locked_shares": 0,
+            "mark": 24.6,
+            "value": 14760.0
+          },
+          {
+            "code": "sz.000963",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 39.45,
+            "value": 7890.0
+          },
+          {
+            "code": "sz.002028",
+            "shares": 400,
+            "locked_shares": 0,
+            "mark": 154.59,
+            "value": 61836.0
+          },
+          {
+            "code": "sz.002142",
+            "shares": 1800,
+            "locked_shares": 0,
+            "mark": 28.09,
+            "value": 50562.0
+          },
+          {
+            "code": "sz.002384",
+            "shares": 600,
+            "locked_shares": 0,
+            "mark": 84.65,
+            "value": 50790.0
+          },
+          {
+            "code": "sz.002938",
+            "shares": 600,
+            "locked_shares": 0,
+            "mark": 50.58,
+            "value": 30348.0
+          },
+          {
+            "code": "sz.300274",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 171.04,
+            "value": 51312.0
+          },
+          {
+            "code": "sz.300308",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 610.0,
+            "value": 61000.0
+          },
+          {
+            "code": "sz.300413",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 24.42,
+            "value": 4884.0
+          },
+          {
+            "code": "sz.300502",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 430.88,
+            "value": 43088.0
+          },
+          {
+            "code": "sz.300750",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 367.26,
+            "value": 73452.0
+          }
+        ]
+      },
+      {
+        "role": "primary",
+        "model": "v4_1_moe_huber",
+        "policy": "static",
+        "fee_bps": 10,
+        "development_run": "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_10bp_tc20_risk15_active0.02",
+        "anchor_date": "2025-12-31",
+        "last_execution_date": "2025-12-30",
+        "sessions_since_execution": 1,
+        "end_balances": {
+          "equity": 2515975.37,
+          "cash": 974.77,
+          "stock_value": 2515000.6,
+          "pending_value": 0.0,
+          "dividends_due": 0.0,
+          "rights_prepaid": 0.0
+        },
+        "holdings": [
+          {
+            "code": "sh.600000",
+            "shares": 2900,
+            "locked_shares": 0,
+            "mark": 12.44,
+            "value": 36076.0
+          },
+          {
+            "code": "sh.600015",
+            "shares": 5900,
+            "locked_shares": 0,
+            "mark": 6.87,
+            "value": 40533.0
+          },
+          {
+            "code": "sh.600036",
+            "shares": 1900,
+            "locked_shares": 0,
+            "mark": 42.1,
+            "value": 79990.0
+          },
+          {
+            "code": "sh.600066",
+            "shares": 700,
+            "locked_shares": 0,
+            "mark": 32.7,
+            "value": 22890.0
+          },
+          {
+            "code": "sh.600111",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 46.12,
+            "value": 4612.0
+          },
+          {
+            "code": "sh.600362",
+            "shares": 900,
+            "locked_shares": 0,
+            "mark": 54.92,
+            "value": 49428.0
+          },
+          {
+            "code": "sh.600519",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 1377.18,
+            "value": 137718.0
+          },
+          {
+            "code": "sh.600803",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 20.76,
+            "value": 6228.0
+          },
+          {
+            "code": "sh.600919",
+            "shares": 4300,
+            "locked_shares": 0,
+            "mark": 10.4,
+            "value": 44720.0
+          },
+          {
+            "code": "sh.601009",
+            "shares": 5000,
+            "locked_shares": 0,
+            "mark": 11.43,
+            "value": 57150.0
+          },
+          {
+            "code": "sh.601058",
+            "shares": 800,
+            "locked_shares": 0,
+            "mark": 16.18,
+            "value": 12944.0
+          },
+          {
+            "code": "sh.601077",
+            "shares": 6300,
+            "locked_shares": 0,
+            "mark": 6.46,
+            "value": 40698.0
+          },
+          {
+            "code": "sh.601117",
+            "shares": 4400,
+            "locked_shares": 0,
+            "mark": 7.53,
+            "value": 33132.0
+          },
+          {
+            "code": "sh.601138",
+            "shares": 1800,
+            "locked_shares": 0,
+            "mark": 62.05,
+            "value": 111690.0
+          },
+          {
+            "code": "sh.601166",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 21.06,
+            "value": 4212.0
+          },
+          {
+            "code": "sh.601169",
+            "shares": 7200,
+            "locked_shares": 0,
+            "mark": 5.48,
+            "value": 39456.0
+          },
+          {
+            "code": "sh.601186",
+            "shares": 1600,
+            "locked_shares": 0,
+            "mark": 7.67,
+            "value": 12272.0
+          },
+          {
+            "code": "sh.601229",
+            "shares": 4400,
+            "locked_shares": 0,
+            "mark": 10.1,
+            "value": 44440.0
+          },
+          {
+            "code": "sh.601288",
+            "shares": 9900,
+            "locked_shares": 0,
+            "mark": 7.68,
+            "value": 76032.0
+          },
+          {
+            "code": "sh.601318",
+            "shares": 1200,
+            "locked_shares": 0,
+            "mark": 68.4,
+            "value": 82080.0
+          },
+          {
+            "code": "sh.601319",
+            "shares": 7100,
+            "locked_shares": 0,
+            "mark": 8.95,
+            "value": 63545.0
+          },
+          {
+            "code": "sh.601328",
+            "shares": 7100,
+            "locked_shares": 0,
+            "mark": 7.25,
+            "value": 51475.0
+          },
+          {
+            "code": "sh.601336",
+            "shares": 800,
+            "locked_shares": 0,
+            "mark": 69.7,
+            "value": 55760.0
+          },
+          {
+            "code": "sh.601390",
+            "shares": 7400,
+            "locked_shares": 0,
+            "mark": 5.41,
+            "value": 40034.0
+          },
+          {
+            "code": "sh.601398",
+            "shares": 7400,
+            "locked_shares": 0,
+            "mark": 7.93,
+            "value": 58682.0
+          },
+          {
+            "code": "sh.601601",
+            "shares": 1100,
+            "locked_shares": 0,
+            "mark": 41.91,
+            "value": 46101.0
+          },
+          {
+            "code": "sh.601628",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 45.5,
+            "value": 13650.0
+          },
+          {
+            "code": "sh.601658",
+            "shares": 3300,
+            "locked_shares": 0,
+            "mark": 5.45,
+            "value": 17985.0
+          },
+          {
+            "code": "sh.601668",
+            "shares": 400,
+            "locked_shares": 0,
+            "mark": 5.13,
+            "value": 2052.0
+          },
+          {
+            "code": "sh.601669",
+            "shares": 5900,
+            "locked_shares": 0,
+            "mark": 5.2,
+            "value": 30680.0
+          },
+          {
+            "code": "sh.601728",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 6.3,
+            "value": 1260.0
+          },
+          {
+            "code": "sh.601800",
+            "shares": 5600,
+            "locked_shares": 0,
+            "mark": 8.24,
+            "value": 46144.0
+          },
+          {
+            "code": "sh.601818",
+            "shares": 12100,
+            "locked_shares": 0,
+            "mark": 3.49,
+            "value": 42229.0
+          },
+          {
+            "code": "sh.601825",
+            "shares": 2900,
+            "locked_shares": 0,
+            "mark": 9.29,
+            "value": 26941.0
+          },
+          {
+            "code": "sh.601838",
+            "shares": 1900,
+            "locked_shares": 0,
+            "mark": 16.12,
+            "value": 30628.0
+          },
+          {
+            "code": "sh.601857",
+            "shares": 3100,
+            "locked_shares": 0,
+            "mark": 10.41,
+            "value": 32271.0
+          },
+          {
+            "code": "sh.601868",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 2.35,
+            "value": 235.0
+          },
+          {
+            "code": "sh.601872",
+            "shares": 600,
+            "locked_shares": 0,
+            "mark": 8.98,
+            "value": 5388.0
+          },
+          {
+            "code": "sh.601916",
+            "shares": 600,
+            "locked_shares": 0,
+            "mark": 3.04,
+            "value": 1824.0
+          },
+          {
+            "code": "sh.601919",
+            "shares": 2100,
+            "locked_shares": 0,
+            "mark": 15.18,
+            "value": 31878.0
+          },
+          {
+            "code": "sh.601939",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 9.28,
+            "value": 928.0
+          },
+          {
+            "code": "sh.601988",
+            "shares": 3000,
+            "locked_shares": 0,
+            "mark": 5.73,
+            "value": 17190.0
+          },
+          {
+            "code": "sh.603019",
+            "shares": 500,
+            "locked_shares": 0,
+            "mark": 85.64,
+            "value": 42820.0
+          },
+          {
+            "code": "sh.603259",
+            "shares": 400,
+            "locked_shares": 0,
+            "mark": 90.64,
+            "value": 36256.0
+          },
+          {
+            "code": "sh.603296",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 90.74,
+            "value": 18148.0
+          },
+          {
+            "code": "sh.603993",
+            "shares": 3400,
+            "locked_shares": 0,
+            "mark": 20.0,
+            "value": 68000.0
+          },
+          {
+            "code": "sh.688008",
+            "shares": 259,
+            "locked_shares": 0,
+            "mark": 117.8,
+            "value": 30510.2
+          },
+          {
+            "code": "sh.688981",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 122.83,
+            "value": 24566.0
+          },
+          {
+            "code": "sz.000333",
+            "shares": 800,
+            "locked_shares": 0,
+            "mark": 78.15,
+            "value": 62520.0
+          },
+          {
+            "code": "sz.000425",
+            "shares": 800,
+            "locked_shares": 0,
+            "mark": 11.58,
+            "value": 9264.0
+          },
+          {
+            "code": "sz.000708",
+            "shares": 3400,
+            "locked_shares": 0,
+            "mark": 16.37,
+            "value": 55658.0
+          },
+          {
+            "code": "sz.000807",
+            "shares": 1900,
+            "locked_shares": 0,
+            "mark": 32.84,
+            "value": 62396.0
+          },
+          {
+            "code": "sz.002028",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 154.59,
+            "value": 46377.0
+          },
+          {
+            "code": "sz.002142",
+            "shares": 1900,
+            "locked_shares": 0,
+            "mark": 28.09,
+            "value": 53371.0
+          },
+          {
+            "code": "sz.002241",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 28.73,
+            "value": 2873.0
+          },
+          {
+            "code": "sz.002384",
+            "shares": 600,
+            "locked_shares": 0,
+            "mark": 84.65,
+            "value": 50790.0
+          },
+          {
+            "code": "sz.002916",
+            "shares": 60,
+            "locked_shares": 0,
+            "mark": 232.29,
+            "value": 13937.4
+          },
+          {
+            "code": "sz.002938",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 50.58,
+            "value": 10116.0
+          },
+          {
+            "code": "sz.300033",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 322.18,
+            "value": 32218.0
+          },
+          {
+            "code": "sz.300274",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 171.04,
+            "value": 51312.0
+          },
+          {
+            "code": "sz.300308",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 610.0,
+            "value": 61000.0
+          },
+          {
+            "code": "sz.300408",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 45.75,
+            "value": 4575.0
+          },
+          {
+            "code": "sz.300476",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 287.58,
+            "value": 28758.0
+          },
+          {
+            "code": "sz.300502",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 430.88,
+            "value": 86176.0
+          },
+          {
+            "code": "sz.300750",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 367.26,
+            "value": 110178.0
+          }
+        ]
+      },
+      {
+        "role": "primary",
+        "model": "v4_1_moe_huber",
+        "policy": "static",
+        "fee_bps": 20,
+        "development_run": "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_20bp_tc20_risk15_active0.02",
+        "anchor_date": "2025-12-31",
+        "last_execution_date": "2025-12-30",
+        "sessions_since_execution": 1,
+        "end_balances": {
+          "equity": 2321701.51,
+          "cash": 2474.81,
+          "stock_value": 2319226.7,
+          "pending_value": 0.0,
+          "dividends_due": 0.0,
+          "rights_prepaid": 0.0
+        },
+        "holdings": [
+          {
+            "code": "sh.600000",
+            "shares": 2300,
+            "locked_shares": 0,
+            "mark": 12.44,
+            "value": 28612.0
+          },
+          {
+            "code": "sh.600015",
+            "shares": 5300,
+            "locked_shares": 0,
+            "mark": 6.87,
+            "value": 36411.0
+          },
+          {
+            "code": "sh.600036",
+            "shares": 1700,
+            "locked_shares": 0,
+            "mark": 42.1,
+            "value": 71570.0
+          },
+          {
+            "code": "sh.600066",
+            "shares": 600,
+            "locked_shares": 0,
+            "mark": 32.7,
+            "value": 19620.0
+          },
+          {
+            "code": "sh.600111",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 46.12,
+            "value": 4612.0
+          },
+          {
+            "code": "sh.600362",
+            "shares": 900,
+            "locked_shares": 0,
+            "mark": 54.92,
+            "value": 49428.0
+          },
+          {
+            "code": "sh.600519",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 1377.18,
+            "value": 137718.0
+          },
+          {
+            "code": "sh.600803",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 20.76,
+            "value": 4152.0
+          },
+          {
+            "code": "sh.600919",
+            "shares": 4100,
+            "locked_shares": 0,
+            "mark": 10.4,
+            "value": 42640.0
+          },
+          {
+            "code": "sh.601009",
+            "shares": 4400,
+            "locked_shares": 0,
+            "mark": 11.43,
+            "value": 50292.0
+          },
+          {
+            "code": "sh.601058",
+            "shares": 800,
+            "locked_shares": 0,
+            "mark": 16.18,
+            "value": 12944.0
+          },
+          {
+            "code": "sh.601077",
+            "shares": 4200,
+            "locked_shares": 0,
+            "mark": 6.46,
+            "value": 27132.0
+          },
+          {
+            "code": "sh.601117",
+            "shares": 4300,
+            "locked_shares": 0,
+            "mark": 7.53,
+            "value": 32379.0
+          },
+          {
+            "code": "sh.601138",
+            "shares": 1600,
+            "locked_shares": 0,
+            "mark": 62.05,
+            "value": 99280.0
+          },
+          {
+            "code": "sh.601166",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 21.06,
+            "value": 6318.0
+          },
+          {
+            "code": "sh.601169",
+            "shares": 6400,
+            "locked_shares": 0,
+            "mark": 5.48,
+            "value": 35072.0
+          },
+          {
+            "code": "sh.601186",
+            "shares": 1200,
+            "locked_shares": 0,
+            "mark": 7.67,
+            "value": 9204.0
+          },
+          {
+            "code": "sh.601229",
+            "shares": 4200,
+            "locked_shares": 0,
+            "mark": 10.1,
+            "value": 42420.0
+          },
+          {
+            "code": "sh.601288",
+            "shares": 9200,
+            "locked_shares": 0,
+            "mark": 7.68,
+            "value": 70656.0
+          },
+          {
+            "code": "sh.601318",
+            "shares": 1100,
+            "locked_shares": 0,
+            "mark": 68.4,
+            "value": 75240.0
+          },
+          {
+            "code": "sh.601319",
+            "shares": 6600,
+            "locked_shares": 0,
+            "mark": 8.95,
+            "value": 59070.0
+          },
+          {
+            "code": "sh.601328",
+            "shares": 6100,
+            "locked_shares": 0,
+            "mark": 7.25,
+            "value": 44225.0
+          },
+          {
+            "code": "sh.601336",
+            "shares": 700,
+            "locked_shares": 0,
+            "mark": 69.7,
+            "value": 48790.0
+          },
+          {
+            "code": "sh.601390",
+            "shares": 6800,
+            "locked_shares": 0,
+            "mark": 5.41,
+            "value": 36788.0
+          },
+          {
+            "code": "sh.601398",
+            "shares": 7100,
+            "locked_shares": 0,
+            "mark": 7.93,
+            "value": 56303.0
+          },
+          {
+            "code": "sh.601601",
+            "shares": 1100,
+            "locked_shares": 0,
+            "mark": 41.91,
+            "value": 46101.0
+          },
+          {
+            "code": "sh.601628",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 45.5,
+            "value": 13650.0
+          },
+          {
+            "code": "sh.601658",
+            "shares": 2800,
+            "locked_shares": 0,
+            "mark": 5.45,
+            "value": 15260.0
+          },
+          {
+            "code": "sh.601669",
+            "shares": 5800,
+            "locked_shares": 0,
+            "mark": 5.2,
+            "value": 30160.0
+          },
+          {
+            "code": "sh.601800",
+            "shares": 4400,
+            "locked_shares": 0,
+            "mark": 8.24,
+            "value": 36256.0
+          },
+          {
+            "code": "sh.601818",
+            "shares": 11100,
+            "locked_shares": 0,
+            "mark": 3.49,
+            "value": 38739.0
+          },
+          {
+            "code": "sh.601825",
+            "shares": 3100,
+            "locked_shares": 0,
+            "mark": 9.29,
+            "value": 28799.0
+          },
+          {
+            "code": "sh.601838",
+            "shares": 1300,
+            "locked_shares": 0,
+            "mark": 16.12,
+            "value": 20956.0
+          },
+          {
+            "code": "sh.601857",
+            "shares": 2900,
+            "locked_shares": 0,
+            "mark": 10.41,
+            "value": 30189.0
+          },
+          {
+            "code": "sh.601868",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 2.35,
+            "value": 705.0
+          },
+          {
+            "code": "sh.601872",
+            "shares": 1600,
+            "locked_shares": 0,
+            "mark": 8.98,
+            "value": 14368.0
+          },
+          {
+            "code": "sh.601916",
+            "shares": 1600,
+            "locked_shares": 0,
+            "mark": 3.04,
+            "value": 4864.0
+          },
+          {
+            "code": "sh.601919",
+            "shares": 2200,
+            "locked_shares": 0,
+            "mark": 15.18,
+            "value": 33396.0
+          },
+          {
+            "code": "sh.601988",
+            "shares": 2800,
+            "locked_shares": 0,
+            "mark": 5.73,
+            "value": 16044.0
+          },
+          {
+            "code": "sh.601998",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 7.7,
+            "value": 1540.0
+          },
+          {
+            "code": "sh.603019",
+            "shares": 400,
+            "locked_shares": 0,
+            "mark": 85.64,
+            "value": 34256.0
+          },
+          {
+            "code": "sh.603259",
+            "shares": 500,
+            "locked_shares": 0,
+            "mark": 90.64,
+            "value": 45320.0
+          },
+          {
+            "code": "sh.603296",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 90.74,
+            "value": 27222.0
+          },
+          {
+            "code": "sh.603799",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 68.26,
+            "value": 6826.0
+          },
+          {
+            "code": "sh.603993",
+            "shares": 3200,
+            "locked_shares": 0,
+            "mark": 20.0,
+            "value": 64000.0
+          },
+          {
+            "code": "sh.688981",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 122.83,
+            "value": 24566.0
+          },
+          {
+            "code": "sz.000333",
+            "shares": 800,
+            "locked_shares": 0,
+            "mark": 78.15,
+            "value": 62520.0
+          },
+          {
+            "code": "sz.000425",
+            "shares": 600,
+            "locked_shares": 0,
+            "mark": 11.58,
+            "value": 6948.0
+          },
+          {
+            "code": "sz.000651",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 40.22,
+            "value": 4022.0
+          },
+          {
+            "code": "sz.000708",
+            "shares": 3200,
+            "locked_shares": 0,
+            "mark": 16.37,
+            "value": 52384.0
+          },
+          {
+            "code": "sz.000807",
+            "shares": 1800,
+            "locked_shares": 0,
+            "mark": 32.84,
+            "value": 59112.0
+          },
+          {
+            "code": "sz.002028",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 154.59,
+            "value": 46377.0
+          },
+          {
+            "code": "sz.002142",
+            "shares": 1800,
+            "locked_shares": 0,
+            "mark": 28.09,
+            "value": 50562.0
+          },
+          {
+            "code": "sz.002241",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 28.73,
+            "value": 8619.0
+          },
+          {
+            "code": "sz.002384",
+            "shares": 600,
+            "locked_shares": 0,
+            "mark": 84.65,
+            "value": 50790.0
+          },
+          {
+            "code": "sz.002916",
+            "shares": 130,
+            "locked_shares": 0,
+            "mark": 232.29,
+            "value": 30197.7
+          },
+          {
+            "code": "sz.002938",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 50.58,
+            "value": 10116.0
+          },
+          {
+            "code": "sz.300274",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 171.04,
+            "value": 51312.0
+          },
+          {
+            "code": "sz.300308",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 610.0,
+            "value": 61000.0
+          },
+          {
+            "code": "sz.300408",
+            "shares": 200,
+            "locked_shares": 0,
+            "mark": 45.75,
+            "value": 9150.0
+          },
+          {
+            "code": "sz.300476",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 287.58,
+            "value": 28758.0
+          },
+          {
+            "code": "sz.300502",
+            "shares": 100,
+            "locked_shares": 0,
+            "mark": 430.88,
+            "value": 43088.0
+          },
+          {
+            "code": "sz.300750",
+            "shares": 300,
+            "locked_shares": 0,
+            "mark": 367.26,
+            "value": 110178.0
+          }
+        ]
+      }
+    ],
+    "selection": {
+      "primary": {
+        "model": "v4_1_moe_huber",
+        "policy": "static",
+        "mixture": {
+          "v4_1_regime_moe": 0.5,
+          "original_unconstrained_huber": 0.5
+        }
+      },
+      "baseline": {
+        "model": "v3_1_champion",
+        "policy": "dynamic",
+        "mixture": {
+          "nonnegative_effective_state_ridge": 0.5,
+          "original_unconstrained_huber": 0.5
+        }
+      }
+    },
+    "universe": "Point-in-time CSI300; same eligible intersection as locked V3.1 scores; as-of weekly membership and trade rules. No look-ahead or post-outcome survivor filter.",
+    "features": {
+      "status": "go",
+      "selected": [
+        "CORR_PV_10",
+        "RET_5",
+        "MOM_120_SKIP20",
+        "HIGH_52W_PROX",
+        "SP_TTM",
+        "EP_TTM"
+      ],
+      "directions": {
+        "CORR_PV_10": -1,
+        "RET_5": -1,
+        "MOM_120_SKIP20": 1,
+        "HIGH_52W_PROX": 1,
+        "SP_TTM": 1,
+        "EP_TTM": 1
+      },
+      "quota": {
+        "fast": 2,
+        "trend": 2,
+        "value": 2
+      },
+      "qualified_counts": {
+        "fast": 2,
+        "trend": 2,
+        "value": 3
+      },
+      "provisional_only": [],
+      "horizons": [
+        5,
+        10,
+        20
+      ],
+      "states": [
+        "market_return_20d",
+        "market_volatility_20d",
+        "market_breadth_20d",
+        "tier_vol_spread_20d",
+        "value_minus_trend_60d"
+      ],
+      "selection_end": "2022-12-31",
+      "max_abs_median_spearman": 0.6292011783192474,
+      "style_missing_rate": 0.02491103202846975,
+      "style_missing_rate_2015_2022": 0.034229828850855744,
+      "provisional_7f": [
+        "CORR_PV_10",
+        "RET_5",
+        "MOM_120_SKIP20",
+        "HIGH_52W_PROX",
+        "SP_TTM",
+        "EP_TTM",
+        "TURN_20"
+      ],
+      "provisional_7f_directions": {
+        "CORR_PV_10": -1,
+        "RET_5": -1,
+        "MOM_120_SKIP20": 1,
+        "HIGH_52W_PROX": 1,
+        "SP_TTM": 1,
+        "EP_TTM": 1,
+        "TURN_20": -1
+      }
+    },
+    "target": {
+      "h": 5,
+      "entry": "next session close",
+      "exit": "five trading sessions after entry, close",
+      "formula": "(adjusted stock return - BETA_120 * H00300 return)/max(VOL_20,0.01); weekly winsorize at mean +/- 3 sample SD, z-score. Training requires valid exit_date <= signal_date and earlier signal."
+    },
+    "moe": {
+      "experts": {
+        "fast": [
+          "-RET_5",
+          "-CORR_PV_10"
+        ],
+        "trend": [
+          "+MOM_120_SKIP20",
+          "+HIGH_52W_PROX"
+        ],
+        "value": [
+          "+EP_TTM",
+          "+SP_TTM"
+        ]
+      },
+      "expert_processing": "weekly winsorize 3 population SD, z-score, zero fill, equal average within group then z-score",
+      "lookback_states_weeks": 12,
+      "normalization": "using expanding mature training states only, population SD, clamp +/-3",
+      "min_training_weeks": 52,
+      "min_valid_stocks": 50,
+      "window": "expanding, earliest eligible 2015-07-03",
+      "refit_every_eligible_forecast_weeks": 12,
+      "cadence_origin": "2017-01-06",
+      "last_development_refit": "2025-12-05",
+      "completed_forecast_weeks": 460,
+      "architecture": "Conv1d(5,12,k3,pad1),SiLU,Conv1d(12,12,k3,pad1),SiLU,last+mean,LN24,dropout0.15,linear24->3,softmax temperature1.5",
+      "loss": "-mean(IC)/(population_std(IC)+0.05)+0.15*mean(adjacent-week L1 weight difference)+0.05*mean(squared L2 distance to uniform)",
+      "optimizer": "AdamW",
+      "lr": 0.003,
+      "weight_decay": 0.02,
+      "scheduler": "CosineAnnealingLR T_max=25",
+      "epochs": 25,
+      "batch": "full, chronological",
+      "gradient_norm": 1,
+      "seeds": [
+        42,
+        1024,
+        2026,
+        777,
+        999
+      ],
+      "ensemble": "mean routing weights across five eval-mode models",
+      "torch_threads": 2,
+      "device": "cpu"
+    },
+    "traditional": {
+      "horizon": 5,
+      "ridge_l2": [
+        0.05,
+        0.5
+      ],
+      "tree": {
+        "objective": "huber",
+        "alpha": 0.9,
+        "learning_rate": 0.05,
+        "max_depth": 4,
+        "num_leaves": 12,
+        "min_data_in_leaf": 200,
+        "colsample_bytree": 0.7,
+        "max_bin": 63,
+        "lambda_l2": 1.0,
+        "force_col_wise": true,
+        "deterministic": true,
+        "verbosity": -1,
+        "seed": 731
+      },
+      "tree_rounds": 60,
+      "tree_refit_weeks": 4,
+      "min_weeks": 52,
+      "window": 260,
+      "ridge": "Weekly; clip oriented effective coefficients at zero only after state interaction. Deterministic linear solve.",
+      "tree_constraints": "none",
+      "features": "6 oriented centered percentile ranks (missing neutral); 5 standardized/clipped states and 30 interactions; state scaling of last fit; equal total sample weight to each mature week.",
+      "calendar": "Anchor every fourth eligible weekly forecast to 2017-01-06; do not restart at new year. Ridge weekly. MoE quarterly on its own existing 12-week cadence."
+    },
+    "portfolio": {
+      "lookahead": "strictly earlier weekly signal at execution open",
+      "rebalance_sessions": 5,
+      "continue_session_phase": true,
+      "EMA": 0.3,
+      "EMA_definition": "Z-score each component by week using population SD; mix 50/50, then EMA 0.3 by code, new entrant starts at its raw score. Re-standardize and clip +/-3. Preserve prior EMA vector and last 52 mature calibration ICs.",
+      "cost_penalty_bps": 20,
+      "fees_on_absolute_filled_notional_bps": [
+        10,
+        20
+      ],
+      "risk_aversion": 15,
+      "active_limit": 0.02,
+      "single_stock_cap": 0.06,
+      "funding_eta": 0.96,
+      "lot_cash_reserve": 0.003,
+      "anchor": "FloatMV, 20-session median with min 10 valid amount/(turn/100); keep original handling of missing weights",
+      "IC_calibration": {
+        "mature_weeks": 52,
+        "floor": 0.02,
+        "cap": 0.08
+      },
+      "static_beta": [
+        0.95,
+        1.05
+      ],
+      "dynamic_beta": {
+        "offensive": "return20>0 and breadth>=0.50 -> [0.98,1.08]",
+        "defensive": "return20<=0 and breadth<0.45 -> [0.82,0.92]",
+        "neutral": [
+          0.92,
+          1.0
+        ]
+      },
+      "execution_policy": "identical open fills, sells before buys, lot/cash/price limits, suspensions and valuation as versioned engine; solver beta bands divided by eta"
+    },
+    "continuity": {
+      "method": "Replay anchored development state or restore a verified equivalent engine checkpoint, including cash, marks, locked shares, entitlements and unsettled payments. Match each terminal NAV and holdings before first 2026 trade. Continue H00300/FloatMV/EW from 2025-12-31 and preserve their own schedules and benchmark holdings. Historical initial 1m is not a 2026 cash deposit.",
+      "boundary": "If combined official calendar produces an additional eligible 2025 year-end signal after the last published 2025 score, append causally before the first 2026 execution; preserve label maturity and phase. No insertion of future information or reset of EMA/model counters.",
+      "EMA_anchors": {
+        "v4_1_moe_huber": {
+          "signal_date": "2025-12-26",
+          "score_memory_by_code": {
+            "sh.600000": -0.2747638958449013,
+            "sh.600009": -0.24800495146343168,
+            "sh.600010": 0.24893178331975757,
+            "sh.600011": 0.9413898581270512,
+            "sh.600015": -0.03376460597528903,
+            "sh.600016": -0.1716702955420858,
+            "sh.600018": 0.19604580337205613,
+            "sh.600019": 0.7985993378570158,
+            "sh.600023": 0.7415859438585295,
+            "sh.600025": 0.4098025309216524,
+            "sh.600026": -0.006843296653672226,
+            "sh.600027": 0.8618071121755269,
+            "sh.600028": 0.5529561925330236,
+            "sh.600029": 0.14852569142994515,
+            "sh.600030": -0.3263354071838206,
+            "sh.600031": 0.21056914417828354,
+            "sh.600036": 0.685133818713057,
+            "sh.600039": 0.3966248660465663,
+            "sh.600048": -0.05496381364005273,
+            "sh.600050": 0.5820831150164909,
+            "sh.600061": -0.3564583835479008,
+            "sh.600066": 0.577952032821679,
+            "sh.600085": -0.20044166443346798,
+            "sh.600089": -0.31000788197618834,
+            "sh.600104": 0.05486210515280767,
+            "sh.600111": 0.2809275154650748,
+            "sh.600115": 0.13860030925200867,
+            "sh.600150": -0.3157703732435405,
+            "sh.600160": -0.6279491331760174,
+            "sh.600161": -0.40109688203960275,
+            "sh.600176": -0.3292743986519745,
+            "sh.600183": -0.45357037555851554,
+            "sh.600188": 0.2774090171112167,
+            "sh.600196": 0.0011240908618524448,
+            "sh.600219": -0.39093978967995635,
+            "sh.600233": 0.697511333170146,
+            "sh.600276": 0.19702825755549508,
+            "sh.600309": -0.44578502254711133,
+            "sh.600346": -0.3790822468452196,
+            "sh.600362": 0.06009394627247261,
+            "sh.600372": -0.3950025226379773,
+            "sh.600377": -0.1363162716837642,
+            "sh.600406": 0.20680005770148563,
+            "sh.600415": -0.3009975930324898,
+            "sh.600426": 0.016603281553624623,
+            "sh.600436": -0.6008977096164969,
+            "sh.600438": -0.32101536315047907,
+            "sh.600460": -0.48761574373323513,
+            "sh.600482": -0.05865982607678322,
+            "sh.600489": 0.12135308036194112,
+            "sh.600515": -0.50472815506556,
+            "sh.600519": 0.16826694454012522,
+            "sh.600522": -0.42792827729212024,
+            "sh.600547": -0.650443914088046,
+            "sh.600570": -0.7273606331983511,
+            "sh.600584": -0.02885768790546038,
+            "sh.600585": 0.36231980105842665,
+            "sh.600588": -0.6272748321381482,
+            "sh.600600": 0.10051724835279316,
+            "sh.600660": 0.3731893399293166,
+            "sh.600674": 0.05644804181434485,
+            "sh.600690": 0.5269704412495166,
+            "sh.600741": 1.0759214727533575,
+            "sh.600760": -0.29814432573220273,
+            "sh.600795": 1.0172219162802594,
+            "sh.600803": 1.0700572699240607,
+            "sh.600809": 0.05069763070056699,
+            "sh.600845": -0.6803699885712715,
+            "sh.600875": -0.4738431355503552,
+            "sh.600886": 0.7430785516460734,
+            "sh.600887": 0.1951366780344885,
+            "sh.600893": -0.823107034437729,
+            "sh.600900": 0.6303022063093938,
+            "sh.600905": 0.3670131047377431,
+            "sh.600918": 0.06719449977622627,
+            "sh.600919": 0.2721125642467045,
+            "sh.600926": 0.8275482323407194,
+            "sh.600930": 0.016038973232388648,
+            "sh.600938": 0.8880792843639208,
+            "sh.600941": 0.7126284046564598,
+            "sh.600958": -0.6044779935802446,
+            "sh.600989": 0.034464902763230304,
+            "sh.600999": -0.4491031934340781,
+            "sh.601006": 0.47207839846854815,
+            "sh.601009": 1.119007334432067,
+            "sh.601012": -0.4778145362937841,
+            "sh.601018": 0.8766552707022142,
+            "sh.601021": 0.19331075449830992,
+            "sh.601058": 0.8392536625157425,
+            "sh.601066": -0.2991227848565441,
+            "sh.601077": 0.5076195514190115,
+            "sh.601088": 0.5635897448919703,
+            "sh.601100": 0.017739699246029764,
+            "sh.601111": 0.07092947164427552,
+            "sh.601117": 1.1178428921952002,
+            "sh.601127": 0.20033787835133263,
+            "sh.601136": -0.38290733720252523,
+            "sh.601138": 0.07282654971059166,
+            "sh.601166": 0.13824182108259025,
+            "sh.601169": -0.3310260943568593,
+            "sh.601186": 1.047750401284907,
+            "sh.601211": 0.33853142455095575,
+            "sh.601225": 0.6770896604859682,
+            "sh.601229": 0.4317696297260628,
+            "sh.601236": 0.16371840684460698,
+            "sh.601238": -0.18550042524129257,
+            "sh.601288": 0.8117766454045845,
+            "sh.601298": -0.20356833176315392,
+            "sh.601318": -0.040839224992929885,
+            "sh.601319": 0.6887342027766944,
+            "sh.601328": 0.3100764585175609,
+            "sh.601336": 0.25350495009073293,
+            "sh.601360": -0.05030979296538714,
+            "sh.601377": -0.46480913772054333,
+            "sh.601390": 0.9409434565761414,
+            "sh.601398": 0.6027995871357207,
+            "sh.601456": -0.05340797815501767,
+            "sh.601600": -0.2789913885194344,
+            "sh.601601": -0.07233905292873338,
+            "sh.601607": 0.05166261174588102,
+            "sh.601618": 0.12097654883179954,
+            "sh.601628": 0.38065576861634054,
+            "sh.601633": -0.3291358108126779,
+            "sh.601658": 0.4496250179941438,
+            "sh.601668": 1.0962901504099745,
+            "sh.601669": 0.5386476919568299,
+            "sh.601688": -0.38343245461919895,
+            "sh.601689": -0.5148891292494049,
+            "sh.601698": -1.3942177314227142,
+            "sh.601728": 0.3101673403622657,
+            "sh.601766": 0.7963936550803914,
+            "sh.601788": -0.6530551201658442,
+            "sh.601800": 0.6137161156399236,
+            "sh.601808": 0.4309302715436117,
+            "sh.601816": -0.2060823592937831,
+            "sh.601818": -0.2605541080375294,
+            "sh.601825": 0.7463945260824245,
+            "sh.601838": 0.4540394038992128,
+            "sh.601857": 0.7781081602035433,
+            "sh.601868": 0.5309730950349894,
+            "sh.601872": 0.24352363024863063,
+            "sh.601877": 0.05315119429612809,
+            "sh.601878": -0.04388203622844153,
+            "sh.601881": -0.5810504589201191,
+            "sh.601888": -0.9167382120772394,
+            "sh.601898": 0.5480719476585637,
+            "sh.601899": 0.083511617667833,
+            "sh.601901": -0.3908618834399642,
+            "sh.601916": -0.14939795810696968,
+            "sh.601919": 0.5891553110313033,
+            "sh.601939": 0.5652735876516619,
+            "sh.601985": -0.2607240590053325,
+            "sh.601988": 0.14800695122292387,
+            "sh.601998": 0.6630347183918384,
+            "sh.603019": 0.7965368708386186,
+            "sh.603195": 0.19478778113447653,
+            "sh.603259": -0.058979046026078424,
+            "sh.603260": -0.6767631170580652,
+            "sh.603288": -0.6401146172714854,
+            "sh.603296": -0.17192274684995054,
+            "sh.603369": -0.45140830760212114,
+            "sh.603392": -0.9584537311493997,
+            "sh.603501": -0.4478454569776589,
+            "sh.603799": 0.11255585029969722,
+            "sh.603893": -0.1441308293083789,
+            "sh.603986": -0.3909526022750212,
+            "sh.603993": 0.22277434232593674,
+            "sh.605117": 0.19072954703824066,
+            "sh.605499": -0.1278399492778281,
+            "sh.688008": 0.04985626294989644,
+            "sh.688009": 0.04699694986766528,
+            "sh.688036": -0.8459344092031482,
+            "sh.688041": -0.1588581132703804,
+            "sh.688047": -0.3625834615072287,
+            "sh.688082": -0.46134076134494983,
+            "sh.688111": 0.00431648461538587,
+            "sh.688126": -0.511110864504103,
+            "sh.688169": 0.29829398436382865,
+            "sh.688187": 0.03078113903147761,
+            "sh.688223": -0.9387839027753297,
+            "sh.688256": 0.3219849641818091,
+            "sh.688271": -0.23024241032979587,
+            "sh.688303": -0.6903524248334347,
+            "sh.688396": -0.32486543236669635,
+            "sh.688472": -0.6201756995084637,
+            "sh.688506": 0.32126753144873815,
+            "sh.688981": -0.5935289766970536,
+            "sz.000001": 0.4968277484681701,
+            "sz.000002": -0.06692136441866763,
+            "sz.000063": -0.14022614197327682,
+            "sz.000100": -0.08952828065751531,
+            "sz.000157": 0.223581713321885,
+            "sz.000166": -0.26839228437244916,
+            "sz.000301": -0.40140572508752237,
+            "sz.000333": 0.8609373495291452,
+            "sz.000338": 0.4681524262678287,
+            "sz.000408": -0.525534982398729,
+            "sz.000425": 0.4538586633665367,
+            "sz.000538": 0.2738019324387011,
+            "sz.000568": 0.6027590077944855,
+            "sz.000596": 0.28119914545192165,
+            "sz.000617": -0.7631268927173169,
+            "sz.000625": -0.1494861161455449,
+            "sz.000630": -0.02507492558112029,
+            "sz.000651": 0.27245079979581344,
+            "sz.000661": -0.09118376196463063,
+            "sz.000708": 1.0123292207621013,
+            "sz.000725": 0.1127484974852453,
+            "sz.000768": -0.7038453539024535,
+            "sz.000776": -0.2717643560501671,
+            "sz.000786": -0.5085100282411332,
+            "sz.000792": -0.6516767855067622,
+            "sz.000807": -0.022625760573802743,
+            "sz.000858": 0.17865103156246587,
+            "sz.000876": 0.32207304658997815,
+            "sz.000895": 0.3661509076209185,
+            "sz.000938": -0.008517674689480947,
+            "sz.000963": 0.8407560566599774,
+            "sz.000975": -0.2934808362015661,
+            "sz.000977": -0.8129327702392749,
+            "sz.000983": -0.05836028720421671,
+            "sz.000999": -0.6819273487399575,
+            "sz.001391": -0.012824369004158887,
+            "sz.001965": -0.5010435937883372,
+            "sz.001979": 0.7904601913346786,
+            "sz.002001": 0.11761758303297862,
+            "sz.002027": 0.2403137136365475,
+            "sz.002028": 0.5115138345883143,
+            "sz.002049": -0.3226558804192485,
+            "sz.002050": -0.536825225675465,
+            "sz.002074": -0.23900317531087234,
+            "sz.002142": 0.9266882855438853,
+            "sz.002179": -0.5100049902708903,
+            "sz.002230": -0.4229027682097909,
+            "sz.002236": 0.37548212752071386,
+            "sz.002241": -0.157985387219372,
+            "sz.002252": 0.36507781549110035,
+            "sz.002304": 0.004432714006030902,
+            "sz.002311": 0.06300393308647549,
+            "sz.002352": 0.04708063043737088,
+            "sz.002371": 0.0966899996551863,
+            "sz.002384": 0.7955102446885345,
+            "sz.002415": 0.2198910510500162,
+            "sz.002422": 0.3982958472416365,
+            "sz.002459": -0.38405375176448725,
+            "sz.002460": -0.5708405945938039,
+            "sz.002463": -0.42765306126903535,
+            "sz.002466": -0.6656115250838973,
+            "sz.002475": 0.1498733593678603,
+            "sz.002493": -0.3954770039354333,
+            "sz.002594": -0.5411682148876438,
+            "sz.002600": 0.031156577235535693,
+            "sz.002601": -0.2677332548105929,
+            "sz.002625": 0.3323538386172041,
+            "sz.002648": -0.18976445629963767,
+            "sz.002709": -0.25048822174354946,
+            "sz.002714": 0.24353462182868757,
+            "sz.002736": -0.4594981083776172,
+            "sz.002916": 0.017645019733041445,
+            "sz.002920": -0.8898210242945062,
+            "sz.002938": -0.24897648366049072,
+            "sz.003816": 0.42483476079922056,
+            "sz.300014": -0.41175897044663584,
+            "sz.300015": -0.01774969622836392,
+            "sz.300033": -0.2099537221346208,
+            "sz.300059": -0.5292784204416814,
+            "sz.300122": -0.1899762338713188,
+            "sz.300124": -0.4506793005918379,
+            "sz.300251": -0.5048508855361215,
+            "sz.300274": 0.30227636176516065,
+            "sz.300308": 0.49987088388279244,
+            "sz.300316": -0.7921086528268578,
+            "sz.300347": -0.7062078765551063,
+            "sz.300394": 0.06586145198999932,
+            "sz.300408": -0.13735968091733908,
+            "sz.300413": -0.1582886594406827,
+            "sz.300418": -0.04056068179700309,
+            "sz.300433": -0.25444447012855775,
+            "sz.300442": -0.80139947641438,
+            "sz.300476": 0.43540164516569535,
+            "sz.300498": 0.3187509796718972,
+            "sz.300502": 0.3837772981813762,
+            "sz.300628": -0.04733898614701393,
+            "sz.300661": -0.9270142413619684,
+            "sz.300750": 0.745967312252278,
+            "sz.300759": -0.033805512201934326,
+            "sz.300760": -0.12658645263018686,
+            "sz.300782": -0.9133734509939639,
+            "sz.300803": -1.0138905495886328,
+            "sz.300832": 0.20889910019056093,
+            "sz.300866": -0.8650500004443347,
+            "sz.300896": -0.4146429508189946,
+            "sz.300979": 0.20251924535250473,
+            "sz.300999": 0.07498829027544204,
+            "sz.301236": -0.9424854496325912,
+            "sz.301269": -0.8283253363732677,
+            "sz.302132": -0.5454882462921986
+          },
+          "calibration_ic": 0.03184937937058421,
+          "calibration_weeks": 52
+        },
+        "v3_1_champion": {
+          "signal_date": "2025-12-26",
+          "score_memory_by_code": {
+            "sh.600000": -0.009392489126488088,
+            "sh.600009": -0.3229769124064211,
+            "sh.600010": -0.2452263378699568,
+            "sh.600011": 1.1651378303257998,
+            "sh.600015": 0.22702371588207376,
+            "sh.600016": 0.08325653374213812,
+            "sh.600018": 0.5702772931159692,
+            "sh.600019": 0.5056485023623751,
+            "sh.600023": 1.0264907764217435,
+            "sh.600025": 0.27782628564178097,
+            "sh.600026": 0.24711586866334273,
+            "sh.600027": 1.0775948542088996,
+            "sh.600028": -0.1328574313118599,
+            "sh.600029": 0.4707803980800627,
+            "sh.600030": -0.29832907150391,
+            "sh.600031": 0.14675666430374765,
+            "sh.600036": 1.0405703809557652,
+            "sh.600039": 0.9174581504249295,
+            "sh.600048": -0.271455761353338,
+            "sh.600050": 0.185366391352551,
+            "sh.600061": -0.05266964680608144,
+            "sh.600066": 0.9591824452953468,
+            "sh.600085": -0.5444437877584272,
+            "sh.600089": -0.22060017727913778,
+            "sh.600104": -0.5467839808202805,
+            "sh.600111": -0.27664530263789855,
+            "sh.600115": 0.3548861857413643,
+            "sh.600150": -0.7280301965524592,
+            "sh.600160": -0.5269981313070138,
+            "sh.600161": -0.8304590306200658,
+            "sh.600176": 0.05865347739552612,
+            "sh.600183": -0.3334470720498753,
+            "sh.600188": 0.572539647702585,
+            "sh.600196": -0.024658830001443033,
+            "sh.600219": 0.25856182068081146,
+            "sh.600233": 0.7379259950360955,
+            "sh.600276": -0.32032921490602106,
+            "sh.600309": -0.36391530231019853,
+            "sh.600346": -0.26827270233285605,
+            "sh.600362": 0.31907653186889956,
+            "sh.600372": -0.555495109876398,
+            "sh.600377": -0.06719970110036513,
+            "sh.600406": 0.06709005751920855,
+            "sh.600415": -0.29059451601756514,
+            "sh.600426": 0.3504078278539261,
+            "sh.600436": -0.9073446230790946,
+            "sh.600438": -0.4410259586467311,
+            "sh.600460": -0.6024856410159117,
+            "sh.600482": -0.20074160977422528,
+            "sh.600489": 0.08164634930317277,
+            "sh.600515": -0.42454658689437197,
+            "sh.600519": -0.37108659680428985,
+            "sh.600522": 0.11502803788404392,
+            "sh.600547": -0.6123150364570127,
+            "sh.600570": -0.8921474820910824,
+            "sh.600584": -0.06818562433374357,
+            "sh.600585": 0.29157572036115376,
+            "sh.600588": -0.6242506260273486,
+            "sh.600600": -0.093182619712628,
+            "sh.600660": 0.1808088678790601,
+            "sh.600674": 0.09700027889563713,
+            "sh.600690": 0.7011603936481936,
+            "sh.600741": 1.3581083637912232,
+            "sh.600760": -0.8714811759371633,
+            "sh.600795": 1.1254685566520937,
+            "sh.600803": 1.022542309556039,
+            "sh.600809": -0.06277869800759742,
+            "sh.600845": -1.0206005050624853,
+            "sh.600875": -0.0162052485927799,
+            "sh.600886": 0.5487635505010775,
+            "sh.600887": -0.1163409282101193,
+            "sh.600893": -0.98993569674049,
+            "sh.600900": 0.2124287609310707,
+            "sh.600905": 0.011630432561831633,
+            "sh.600918": 0.03552928743156458,
+            "sh.600919": 0.7309412464228454,
+            "sh.600926": 1.267153726082233,
+            "sh.600930": 0.07666671499036846,
+            "sh.600938": 1.0298301114123207,
+            "sh.600941": 0.5525271415503816,
+            "sh.600958": -0.40898408075052595,
+            "sh.600989": 0.3721615443164912,
+            "sh.600999": -0.23785253751262722,
+            "sh.601006": 0.18012461288795703,
+            "sh.601009": 1.5149447948514205,
+            "sh.601012": -0.5179132723510572,
+            "sh.601018": 0.45200153090531014,
+            "sh.601021": 0.016873982281024956,
+            "sh.601058": 1.1017335345817587,
+            "sh.601066": -0.3272031708869291,
+            "sh.601077": 0.7317994656152336,
+            "sh.601088": 0.37642512493542346,
+            "sh.601100": 0.1370371259464902,
+            "sh.601111": -0.09105550472062934,
+            "sh.601117": 1.14284398324796,
+            "sh.601127": 0.06278997127988163,
+            "sh.601136": -0.4657147071137566,
+            "sh.601138": -0.47084126949259275,
+            "sh.601166": 0.46053307076898753,
+            "sh.601169": 0.061632393616097216,
+            "sh.601186": 0.944609950677256,
+            "sh.601211": 0.3578265080489597,
+            "sh.601225": 0.9704524315820351,
+            "sh.601229": 0.93492730394267,
+            "sh.601236": -0.10556387882069472,
+            "sh.601238": -0.04402518590359336,
+            "sh.601288": 0.7803608895459183,
+            "sh.601298": 0.28233356873867466,
+            "sh.601318": 0.32986493891317265,
+            "sh.601319": 1.0476140930557267,
+            "sh.601328": 0.6500415659538432,
+            "sh.601336": 0.6501477655373982,
+            "sh.601360": -0.3593067769546753,
+            "sh.601377": -0.13573039792783753,
+            "sh.601390": 0.7704389967549649,
+            "sh.601398": 0.9130927232935613,
+            "sh.601456": 0.0730901160701702,
+            "sh.601600": 0.07307590049463505,
+            "sh.601601": 0.2920250170024799,
+            "sh.601607": 0.07240398671749614,
+            "sh.601618": -0.06270523630779826,
+            "sh.601628": 0.8380254366083937,
+            "sh.601633": -0.3783567589479203,
+            "sh.601658": 0.7590702740352239,
+            "sh.601668": 0.8525218535908773,
+            "sh.601669": 0.4369230275575951,
+            "sh.601688": 0.05733847106038209,
+            "sh.601689": -0.45942763915681484,
+            "sh.601698": -1.2567822596358023,
+            "sh.601728": -0.16587246709428882,
+            "sh.601766": 0.5956262395174927,
+            "sh.601788": -0.7157778288059508,
+            "sh.601800": 0.4012618865387966,
+            "sh.601808": 0.34650518695087873,
+            "sh.601816": -0.6544273601872962,
+            "sh.601818": 0.13787191572202664,
+            "sh.601825": 1.1716059161669976,
+            "sh.601838": 0.7820175330021976,
+            "sh.601857": 0.44652046670533574,
+            "sh.601868": 0.21413744340494364,
+            "sh.601872": 0.48064669618451733,
+            "sh.601877": 0.2675341305747928,
+            "sh.601878": -0.02687649564443259,
+            "sh.601881": -0.2484822476578402,
+            "sh.601888": -0.8687737238181983,
+            "sh.601898": 0.8139642459524172,
+            "sh.601899": 0.20929317794710284,
+            "sh.601901": -0.23056795476426478,
+            "sh.601916": 0.21191928237580016,
+            "sh.601919": 1.0192969114117847,
+            "sh.601939": 0.9132241825266024,
+            "sh.601985": -0.4767898428594389,
+            "sh.601988": 0.5299233028645328,
+            "sh.601998": 0.9217290452247071,
+            "sh.603019": 0.30930011523474343,
+            "sh.603195": -0.08410778604148703,
+            "sh.603259": 0.017731849759018727,
+            "sh.603260": -0.5842153984049326,
+            "sh.603288": -0.9037473225125521,
+            "sh.603296": -0.03180459222812152,
+            "sh.603369": -0.3093227270116856,
+            "sh.603392": -0.8040907666878878,
+            "sh.603501": -0.7341807356754138,
+            "sh.603799": 0.22993043702596025,
+            "sh.603893": -0.40551841389732485,
+            "sh.603986": -0.3972103779717105,
+            "sh.603993": 0.2699688951051752,
+            "sh.605117": 0.5679360399874981,
+            "sh.605499": -0.4569318257161218,
+            "sh.688008": -0.39731626793404795,
+            "sh.688009": 0.09442579225826025,
+            "sh.688036": -0.5293167860170744,
+            "sh.688041": -0.5805374681186963,
+            "sh.688047": -0.11422713173905492,
+            "sh.688082": -0.38900288115419107,
+            "sh.688111": -0.2803366178939125,
+            "sh.688126": -0.530317867792962,
+            "sh.688169": 0.39739128338130536,
+            "sh.688187": 0.3033152392743697,
+            "sh.688223": -0.920655948587392,
+            "sh.688256": -0.3481707122064868,
+            "sh.688271": -0.6367057511763188,
+            "sh.688303": -0.7532095481931824,
+            "sh.688396": -0.13613670821813512,
+            "sh.688472": -0.559125560748531,
+            "sh.688506": 0.2550713095619291,
+            "sh.688981": -0.9094717423141468,
+            "sz.000001": 0.7243090832790067,
+            "sz.000002": -0.2856185508203752,
+            "sz.000063": -0.18524614853525373,
+            "sz.000100": -0.23306912739999097,
+            "sz.000157": 0.42972012972572016,
+            "sz.000166": -0.09609417267443218,
+            "sz.000301": -0.3324770937188499,
+            "sz.000333": 0.774219315975599,
+            "sz.000338": 0.8145425363332293,
+            "sz.000408": -0.32855160287863383,
+            "sz.000425": 0.5799630743383031,
+            "sz.000538": 0.0746722464773433,
+            "sz.000568": 0.7509998282128174,
+            "sz.000596": 0.3833564018598758,
+            "sz.000617": -0.7847013166722818,
+            "sz.000625": -0.1516009300463444,
+            "sz.000630": 0.06609574008862415,
+            "sz.000651": 0.7423305916993459,
+            "sz.000661": -0.3122591906083126,
+            "sz.000708": 0.9835623293742844,
+            "sz.000725": 0.06826374417018405,
+            "sz.000768": -0.9777561229785984,
+            "sz.000776": 0.08435895945634189,
+            "sz.000786": -0.22848338486283115,
+            "sz.000792": -0.45919779252188536,
+            "sz.000807": 0.39599929606453604,
+            "sz.000858": -0.25762365224403294,
+            "sz.000876": -0.2637946805869649,
+            "sz.000895": 0.26499752827946577,
+            "sz.000938": -0.31560858775698075,
+            "sz.000963": 0.7850356941322929,
+            "sz.000975": 0.09513713078990305,
+            "sz.000977": -0.770524026319005,
+            "sz.000983": -0.04165017470548707,
+            "sz.000999": -0.6810711111577648,
+            "sz.001391": -0.012325692510023304,
+            "sz.001965": -0.3370681676899994,
+            "sz.001979": 0.3951425857066958,
+            "sz.002001": 0.5162124524296984,
+            "sz.002027": 0.09509824937573388,
+            "sz.002028": 0.4674321844004589,
+            "sz.002049": -0.35180488560894896,
+            "sz.002050": -0.4029339360351831,
+            "sz.002074": -0.10256152635551251,
+            "sz.002142": 1.3350578840910554,
+            "sz.002179": -0.6892521201222545,
+            "sz.002230": -0.6884146873243742,
+            "sz.002236": 0.7043817409772478,
+            "sz.002241": -0.24461466372217822,
+            "sz.002252": -0.012557939572761488,
+            "sz.002304": -0.4373824849205704,
+            "sz.002311": -0.19933668277522548,
+            "sz.002352": -0.45612271014528516,
+            "sz.002371": -0.05630414386964466,
+            "sz.002384": 0.6355770542018894,
+            "sz.002415": 0.011051772979398106,
+            "sz.002422": 0.06943339141010152,
+            "sz.002459": -0.537494741741588,
+            "sz.002460": -0.7630930767057639,
+            "sz.002463": -0.3849013847589301,
+            "sz.002466": -0.7833999607605291,
+            "sz.002475": -0.039286078976469324,
+            "sz.002493": -0.7596132649874164,
+            "sz.002594": -0.8001144462366302,
+            "sz.002600": 0.03692067212579431,
+            "sz.002601": -0.19614491074812387,
+            "sz.002625": 0.07550772325672847,
+            "sz.002648": 0.10156273178866732,
+            "sz.002709": -0.2585218769136655,
+            "sz.002714": 0.3939917589348948,
+            "sz.002736": -0.16965743789289572,
+            "sz.002916": -0.13207931783016147,
+            "sz.002920": -0.5723691199991794,
+            "sz.002938": -0.049963550711505725,
+            "sz.003816": 0.24483904952803687,
+            "sz.300014": -0.40218560058837405,
+            "sz.300015": -0.45382426675009946,
+            "sz.300033": -0.49371176548530216,
+            "sz.300059": -0.7908698835192935,
+            "sz.300122": -0.28243292033821815,
+            "sz.300124": -0.6427051733449758,
+            "sz.300251": -0.16488139564086798,
+            "sz.300274": 0.26738215141794375,
+            "sz.300308": 0.28052463546300677,
+            "sz.300316": -0.6365097296023805,
+            "sz.300347": -0.7848112866921411,
+            "sz.300394": 0.2527077402107848,
+            "sz.300408": -0.12171274762860579,
+            "sz.300413": -0.24250541229952602,
+            "sz.300418": -0.15400854641037404,
+            "sz.300433": -0.18196093167276636,
+            "sz.300442": -0.37908063259881913,
+            "sz.300476": 0.2146102259025676,
+            "sz.300498": 0.298098538578801,
+            "sz.300502": 0.10906684048608731,
+            "sz.300628": 0.04571339894898087,
+            "sz.300661": -0.8696929566886997,
+            "sz.300750": 0.1921656199302896,
+            "sz.300759": -0.06230490293769456,
+            "sz.300760": -0.5144872769894313,
+            "sz.300782": -0.6764631194509896,
+            "sz.300803": -1.234254569300255,
+            "sz.300832": -0.0039189533751728955,
+            "sz.300866": -0.3908649387229615,
+            "sz.300896": -0.508736227500292,
+            "sz.300979": 0.20898757368586823,
+            "sz.300999": -0.1570282007509822,
+            "sz.301236": -1.1487438264083005,
+            "sz.301269": -0.9407511488107385,
+            "sz.302132": -0.5084747409201092
+          },
+          "calibration_ic": 0.03764939769491057,
+          "calibration_weeks": 52
+        }
+      }
+    },
+    "controls": {
+      "once_only": "Four accounts only, one signed-off performance release. Data/ledger validation may be repaired before release with an evidence log; no strategy reselection, tuning or performance-driven retries.",
+      "data_audit": "Reconcile corporate actions and price references; record-date entitlements, cash paid, stock bonuses, suspended days, mergers/exchanges/delist settlement and signed order/NAV reconciliations. Escalate unexplained exposed events, never synthesize terms.",
+      "release_requires": {
+        "all_ledgers_verified": true,
+        "unresolved": 0,
+        "terminal_stale": 0
+      },
+      "metrics": "Net return vs each benchmark, annualized daily active IR (sqrt(252)), absolute and relative max drawdown including anchor; weekly equivalent turnover=sum gross_traded/opening_equity*5/N. Compare primary minus baseline within each fee.",
+      "forward": "Use latest completed weekly signal available as of request (target 2026-11-20 subject to official trading calendar). Isolate post-11-13 data; do not consume it until holdout accounting/results sealed. Extend frozen accounts causally to the signal week; show planned next execution, prior actual holdings, target weights and indicative orders, separate from historical fills.",
+      "disclosure": "Prior V1 forward-data work occurred; no 2026 returns inspected for this final registration. Development selection is not out-of-sample evidence."
+    },
+    "runtime": {
+      "python": "3.12.0",
+      "torch": "2.15.0+cpu",
+      "lightgbm": "4.6.0",
+      "numpy": "2.5.5",
+      "scipy": "1.17.1",
+      "pandas": "3.1.1",
+      "pyarrow": "26.0.1",
+      "baostock": "0.9.4"
+    },
+    "source_sha256": {
+      "scripts/v3_1/audit_v3_1_factor_weights.py": {
+        "git_blob_sha256": "a01f88a82dfa24b6309220fa8361bceba361c9d4e2b4fdfd573fb4ba6545cbf1",
+        "local_bytes_sha256": "a01f88a82dfa24b6309220fa8361bceba361c9d4e2b4fdfd573fb4ba6545cbf1"
+      },
+      "scripts/v3_1/build_v3_1_factors_and_labels.py": {
+        "git_blob_sha256": "a2a21b8133c77a51ce848dd5d02afc982bf70ee375ff52cca304e13fe849111d",
+        "local_bytes_sha256": "a2a21b8133c77a51ce848dd5d02afc982bf70ee375ff52cca304e13fe849111d"
+      },
+      "scripts/v3_1/evaluate_v3_1_direction.py": {
+        "git_blob_sha256": "bf972418b62b0d378fc21b86c9fee5dc18276e355d783ee3010dbb199a27b557",
+        "local_bytes_sha256": "bf972418b62b0d378fc21b86c9fee5dc18276e355d783ee3010dbb199a27b557"
+      },
+      "scripts/v3_1/evaluate_v3_1_symmetric_beta.py": {
+        "git_blob_sha256": "4c67b004ac841897d0b9777d87bac392a26dd3153362466dca4007b98df9098d",
+        "local_bytes_sha256": "4c67b004ac841897d0b9777d87bac392a26dd3153362466dca4007b98df9098d"
+      },
+      "scripts/v3_1/optimize_v3_1_portfolio.py": {
+        "git_blob_sha256": "4426aa7392351b29ae96b5cd591cce15fb6d1aab9d1c7fc2b607c9d116dc6843",
+        "local_bytes_sha256": "4426aa7392351b29ae96b5cd591cce15fb6d1aab9d1c7fc2b607c9d116dc6843"
+      },
+      "scripts/v3_1/prepare_v3_1_base.py": {
+        "git_blob_sha256": "3e4bd220f88f2afe7ea05f1473fcbe9431408f5b1d745d8374676cdea72f6888",
+        "local_bytes_sha256": "3e4bd220f88f2afe7ea05f1473fcbe9431408f5b1d745d8374676cdea72f6888"
+      },
+      "scripts/v3_1/report_v3_1_development.py": {
+        "git_blob_sha256": "72ecb7eed2751281d5fc0acef94ba21f878a6654bb757b14bf2ef26597475e64",
+        "local_bytes_sha256": "72ecb7eed2751281d5fc0acef94ba21f878a6654bb757b14bf2ef26597475e64"
+      },
+      "scripts/v3_1/run_v3_1_symmetric_beta.py": {
+        "git_blob_sha256": "4cca418e9116f05c4dee89ae2d2c0043a00ccab139ea91c933816ffccf379133",
+        "local_bytes_sha256": "4cca418e9116f05c4dee89ae2d2c0043a00ccab139ea91c933816ffccf379133"
+      },
+      "scripts/v3_1/summarize_v3_1_portfolio.py": {
+        "git_blob_sha256": "3466a5d25c23c146f41b016571b86baab747cc44d2bea8dedc9e3a0d29569e9e",
+        "local_bytes_sha256": "3466a5d25c23c146f41b016571b86baab747cc44d2bea8dedc9e3a0d29569e9e"
+      },
+      "scripts/v3_1/summarize_v3_1_signals.py": {
+        "git_blob_sha256": "80bdb80b72f2db36768715623cc4bbd28e5d778100c65417e30ad3e501f2bc58",
+        "local_bytes_sha256": "80bdb80b72f2db36768715623cc4bbd28e5d778100c65417e30ad3e501f2bc58"
+      },
+      "scripts/v3_1/train_v3_1_gate.py": {
+        "git_blob_sha256": "16c74d21fc7b898e1446a0d6317696ff8b641d5f659acce46e2f29ede567db33",
+        "local_bytes_sha256": "16c74d21fc7b898e1446a0d6317696ff8b641d5f659acce46e2f29ede567db33"
+      },
+      "scripts/v3_1/train_v3_1_models.py": {
+        "git_blob_sha256": "121c648700242ce54df12a732ed43643befd379cf58a12165266be9e41036d40",
+        "local_bytes_sha256": "121c648700242ce54df12a732ed43643befd379cf58a12165266be9e41036d40"
+      },
+      "scripts/v3_1/v3_1_active_weights.py": {
+        "git_blob_sha256": "77cefaad3847d000c5389776997aa7b7808db216a5643b1299abac1ff30532d0",
+        "local_bytes_sha256": "77cefaad3847d000c5389776997aa7b7808db216a5643b1299abac1ff30532d0"
+      },
+      "scripts/v3_1/v3_1_execution.py": {
+        "git_blob_sha256": "fd43914f653c11e32c0f045f79544e9e285209f2e92086a98055e402a02cfdd5",
+        "local_bytes_sha256": "fd43914f653c11e32c0f045f79544e9e285209f2e92086a98055e402a02cfdd5"
+      },
+      "scripts/v3_1/v3_1_style_state.py": {
+        "git_blob_sha256": "ccd46304765e06f1b19c7cdbfcd9b534d73fb1f14aaf39f10d58c5423f6bf266",
+        "local_bytes_sha256": "ccd46304765e06f1b19c7cdbfcd9b534d73fb1f14aaf39f10d58c5423f6bf266"
+      },
+      "scripts/v4_1/report_v4_1.py": {
+        "git_blob_sha256": "164c5eb7bcf798785eecfe172d6615b927d4aceb8f6dd9864741c1c87e916fec",
+        "local_bytes_sha256": "164c5eb7bcf798785eecfe172d6615b927d4aceb8f6dd9864741c1c87e916fec"
+      },
+      "scripts/v4_1/run_v4_1_backtest.py": {
+        "git_blob_sha256": "9d200a3f789a48705fa4e9be5bfae5e75c26bb8ba3696a6f61d3db4ed2e6a109",
+        "local_bytes_sha256": "9d200a3f789a48705fa4e9be5bfae5e75c26bb8ba3696a6f61d3db4ed2e6a109"
+      },
+      "scripts/v4_1/train_v4_1_regime_moe.py": {
+        "git_blob_sha256": "121ac4fb7c6e9de2be98fba890a0417bfedc14b68ad1079cfc3023cc56d5722b",
+        "local_bytes_sha256": "121ac4fb7c6e9de2be98fba890a0417bfedc14b68ad1079cfc3023cc56d5722b"
+      },
+      "scripts/v4_1/v4_1_regime_moe_model.py": {
+        "git_blob_sha256": "f631696b7d623affa9fa07a4b8d63550886e0f92cd1be9950a4b4297ff4b96f1",
+        "local_bytes_sha256": "f631696b7d623affa9fa07a4b8d63550886e0f92cd1be9950a4b4297ff4b96f1"
+      },
+      "scripts/v4_1/verify_v4_1_signals.py": {
+        "git_blob_sha256": "3b8ee8b66f14c04c7607bf8f06b7cc9109aa4b36838f8b7b96222a1b0a83eda0",
+        "local_bytes_sha256": "3b8ee8b66f14c04c7607bf8f06b7cc9109aa4b36838f8b7b96222a1b0a83eda0"
+      },
+      "scripts/v3/build_v3_factors_and_labels.py": {
+        "git_blob_sha256": "f4f694724a3be3b92ecce5a757ade59ed8e41d39b42db69507396a60fc6878b9",
+        "local_bytes_sha256": "f4f694724a3be3b92ecce5a757ade59ed8e41d39b42db69507396a60fc6878b9"
+      },
+      "scripts/v3/fetch_and_audit_v3_data.py": {
+        "git_blob_sha256": "5d2cfa3124fff6162ab9b3dda37fc999d81f964276b04f9726b1c5b3e071598c",
+        "local_bytes_sha256": "5d2cfa3124fff6162ab9b3dda37fc999d81f964276b04f9726b1c5b3e071598c"
+      },
+      "scripts/v3/optimize_v3_portfolio.py": {
+        "git_blob_sha256": "1c79dfcfded6b0ac11789124d7614bbcd575215be96d13098f9871d764eb694e",
+        "local_bytes_sha256": "1c79dfcfded6b0ac11789124d7614bbcd575215be96d13098f9871d764eb694e"
+      },
+      "scripts/v3/report_v3_development.py": {
+        "git_blob_sha256": "3592526e4ef8578607f9f247f5b78565e53a7c9abe3898b258200dbb6efef907",
+        "local_bytes_sha256": "3592526e4ef8578607f9f247f5b78565e53a7c9abe3898b258200dbb6efef907"
+      },
+      "scripts/v3/run_v3_evaluation_and_holdout_2026.py": {
+        "git_blob_sha256": "aaef6a47642b8b643cb09da19b7a098ea5eb09009dc9763b6c70d078fa632215",
+        "local_bytes_sha256": "aaef6a47642b8b643cb09da19b7a098ea5eb09009dc9763b6c70d078fa632215"
+      },
+      "scripts/v3/train_v3_models.py": {
+        "git_blob_sha256": "dc84887f58ae2e5a6c6b382ec9d294661e3e40d3d5a8eec0e59a1312f02755f5",
+        "local_bytes_sha256": "dc84887f58ae2e5a6c6b382ec9d294661e3e40d3d5a8eec0e59a1312f02755f5"
+      },
+      "scripts/v3/v3_execution.py": {
+        "git_blob_sha256": "8be78a7e0b2cbfc752a274fcd163297e770e5ff6da16db1f7584b0d23015eef9",
+        "local_bytes_sha256": "8be78a7e0b2cbfc752a274fcd163297e770e5ff6da16db1f7584b0d23015eef9"
+      },
+      "scripts/apply_verified_actions.py": {
+        "git_blob_sha256": "7e8263f7219e03ff29a9bdc48e892e08c99ce311ec7811aadae9f9cec80565f4",
+        "local_bytes_sha256": "4d305c647dc981b6f2f8fde0da5240c52ecee3c114fb22cd509ce08434c081d6"
+      },
+      "scripts/normalize_corporate_actions.py": {
+        "git_blob_sha256": "0a37d6e3a0ea32cae628053927f9ae91faf8b24369e7b679508d2a71f074e4cf",
+        "local_bytes_sha256": "233302f024763605cc3822d6ca35e70f7c44333683adbfd52fcf7c3f19496712"
+      },
+      "scripts/build_candidate_factors.py": {
+        "git_blob_sha256": "47e81cea903ebf351ea65802b0f862251f8bb01091cf6e3f2a9b3ce1ed80863a",
+        "local_bytes_sha256": "f29ca14d2a376844defdbc96f2948edaa4c739e07068ad0ee49f9e82fa830ca3"
+      },
+      "scripts/build_forward_labels.py": {
+        "git_blob_sha256": "e00c4d5f24cb126a2fa57eaa8ba56359e40103e9060d7e9ebf2fad4658bb3406",
+        "local_bytes_sha256": "db385d60542d03e1414a39fda2dcefd941605a7d1a842ac0dffcd5f7a32c4c1b"
+      },
+      "scripts/fetch_csi300_total_return.py": {
+        "git_blob_sha256": "b00400d83a2f86481203d586d798085cf5b541d1fe530d6e924b30a9b3228d6c",
+        "local_bytes_sha256": "b48dbfdb5a0652a811fc273634e97e6765436c1bd974370e876a4d81b6ba6c84"
+      }
+    },
+    "development_artifact_sha256": {
+      "research/v3_1/results/step1/labels.parquet": "331293b4bec2a4157c2d846e7e18a30fab455b282695298272566881ebc69404",
+      "research/v3_1/results/step1/states.parquet": "ed0f83defaebdadddf50b56d6ecdd89c8b7c90f743533274e0d2f5eae9336b62",
+      "research/v3_1/results/step1/factor_panel.parquet": "01543729765ca17592831176d0e6fe7e40862155a169a5e1fbdd45cfba5a7d5d",
+      "research/v3_1/results/step1/v3_1_selected_factors.json": "11fd5cd84dddc101a13e7877e6f77a9d768b1a7f7124c965d5d2bfdca8f011c3",
+      "research/v3_1/results/step0/H00300_development.parquet": "b670056247014f005beb679c4732d39cb24156c5d7c5cfb9401d0b504b8e704a",
+      "research/v3_1/results/step0/benchmark_nav.parquet": "6d99f34b1797a3015a88d74bf7fffe6f1c2be9a590f41b832ae6065eb8bc570c",
+      "research/v3_1/results/step0/benchmark_weights.parquet": "f46398fa2651d78484d7ba010cc98aeb0a25adc34097066fe4f2373023b01fb0",
+      "research/v3_1/results/step4/nonnegative_forecasts/h5/predictions.parquet": "e8790d2a9545fa94b877e36891d5d22410b46bd3588c9fd94428a11784f7c4da",
+      "research/v4_1/results/step3/inputs/v4_1_moe_huber/h5/predictions.parquet": "9fbecbcfe622f1e287505ed2b3a4fd6c74b93542429420532f0b5f680a10f85d",
+      "research/v4_1/results/step3/status.json": "9a82015f26388e34b5872501caf5e4d25d79fb9b740d12b1805efbdbbdf54588",
+      "research/v4_1/results/step3/ledger_audit.csv": "2bd7e0b476a6cbfc1abc42ce34b28aacecad2925692b4b2d83d7efa902bae1df",
+      "research/v4_1/results/step3/accounts.csv": "f53761692a4bd15fb8904ea15b48eaecf5dc4cec23e384eb2653eff389584a43",
+      "research/v3_1/results/step2/h5/model_spec.json": "c64f0d9521ebf874673f4cee273555dc26ea00f4986d40cb4c1a8bf571c33347",
+      "research/v3_1/results/step2/h5/training_windows.csv": "1d4a00cd7ecc5db3b1ee02b65a914368d1a9868a86850b056f1fb327f4dbc01f",
+      "research/v4_1/results/step1/training_windows.csv": "86ea3917cc6255cce3b8cffbf4904e93a81926ff10f64206dd9ee3ce72b86cb6",
+      "research/v4_1/results/step1/gate_weights.csv": "385fb7c40e544fe170d10d7f1da9fdf9fa16daa5528421f92c664192869fc15e",
+      "research/v4_1/results/step3/v3_1_champion/10bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_10bp_tc20_risk15_active0.02/nav.parquet": "eb53eaf6f4104316dd33663c7f90649768e6038090b4d4aa402e12f39d5da889",
+      "research/v4_1/results/step3/v3_1_champion/10bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_10bp_tc20_risk15_active0.02/holdings.parquet": "d608500c34bcdbd73cade0d7cb00b0315838fbaeb9d65ab9812227c1ef5f1cb6",
+      "research/v4_1/results/step3/v3_1_champion/10bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_10bp_tc20_risk15_active0.02/actions.parquet": "4c09a90e3fd644925b4c3b8ffda6579931e3efa5b1ba38e4047e5a3deedb3d0e",
+      "research/v4_1/results/step3/v3_1_champion/10bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_10bp_tc20_risk15_active0.02/orders.parquet": "01892ef02e06c2d7da69299dcb894535fe77240ba29b0d75fb7e4fd3181058a4",
+      "research/v4_1/results/step3/v3_1_champion/10bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_10bp_tc20_risk15_active0.02/beta_rebalances.csv": "30fb2cf447db02d746697c7d6d8ad92d5774aa36e704525630cea8232d58b2df",
+      "research/v4_1/results/step3/v3_1_champion/10bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_10bp_tc20_risk15_active0.02/unresolved_exposure.csv": "384fd06b2ffc3d2db29903afdc27c4b33f6a0f8c6a9f58599b3461ae143152cd",
+      "research/v4_1/results/step3/v3_1_champion/20bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_20bp_tc20_risk15_active0.02/nav.parquet": "2832b64f7953236a0fe30a14b310cb01657214f145be85ea95bd07e1962fce49",
+      "research/v4_1/results/step3/v3_1_champion/20bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_20bp_tc20_risk15_active0.02/holdings.parquet": "f3a9767beddd0acfc886008a703e8d24dc8cb8dfac25aef93614b3e6d2870425",
+      "research/v4_1/results/step3/v3_1_champion/20bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_20bp_tc20_risk15_active0.02/actions.parquet": "a38d44564195c3e23e500eb806d7b2e3772aab7d69a9fc68c4211b733a90b86a",
+      "research/v4_1/results/step3/v3_1_champion/20bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_20bp_tc20_risk15_active0.02/orders.parquet": "1b2e846def16a9dec028663c6c68111d02f89db047b15db3667b9d81df8b4e77",
+      "research/v4_1/results/step3/v3_1_champion/20bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_20bp_tc20_risk15_active0.02/beta_rebalances.csv": "1c37b36a000ffdb57c7c006815ea067bcee10829abff7e474cb9368ad75b01de",
+      "research/v4_1/results/step3/v3_1_champion/20bp/runs/fusion_50_50_h5_dynamic_eta0.96_ema0.3_20bp_tc20_risk15_active0.02/unresolved_exposure.csv": "384fd06b2ffc3d2db29903afdc27c4b33f6a0f8c6a9f58599b3461ae143152cd",
+      "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_10bp_tc20_risk15_active0.02/nav.parquet": "ccaac65d021cc46d9e975798868242fc0b60db7d3accec82263eb5634a6e4373",
+      "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_10bp_tc20_risk15_active0.02/holdings.parquet": "e3a0429bd29b2115cd22cad7b4df7bdf14224322eed1135961fb9a43be7cabbd",
+      "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_10bp_tc20_risk15_active0.02/actions.parquet": "b56a7b57b7be93f8320c40cb665195a1c69087c78d42ce66b60c7cb2236e94b9",
+      "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_10bp_tc20_risk15_active0.02/orders.parquet": "6525c405e15fc795c101ea2abb0d89d80bc29b0d4831a50ab4423548ac0a9ad4",
+      "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_10bp_tc20_risk15_active0.02/beta_rebalances.csv": "78194a6f1884c54abdd596a0b54c3d7881675b89473a7aa78b8c22ab46f08c1c",
+      "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_10bp_tc20_risk15_active0.02/unresolved_exposure.csv": "384fd06b2ffc3d2db29903afdc27c4b33f6a0f8c6a9f58599b3461ae143152cd",
+      "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_20bp_tc20_risk15_active0.02/nav.parquet": "9950e751cd56ffab2194d699a310b94de84767a1b7f046447035f7f563be0759",
+      "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_20bp_tc20_risk15_active0.02/holdings.parquet": "4f4b4e5da8618f426cce87e6c3e2fd7158dd7e8cac414c141394b34beb2a824c",
+      "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_20bp_tc20_risk15_active0.02/actions.parquet": "af6cca86434682ff5b4d556a6601ee08e6ad9a23faa95f96145a0abbd42ee1e0",
+      "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_20bp_tc20_risk15_active0.02/orders.parquet": "35677d9f0a5349c8e8e642a22991356bf19afc423784e65438bd4bf3b430485b",
+      "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_20bp_tc20_risk15_active0.02/beta_rebalances.csv": "a965cccd028b62d9e8f82d0f55abdd948ccbc9535e0df70a88b73a95297c3aef",
+      "research/v4_1/results/step3/v4_1_moe_huber/runs/fusion_50_50_h5_static_eta0.96_ema0.3_20bp_tc20_risk15_active0.02/unresolved_exposure.csv": "384fd06b2ffc3d2db29903afdc27c4b33f6a0f8c6a9f58599b3461ae143152cd"
+    }
+  }
+}
