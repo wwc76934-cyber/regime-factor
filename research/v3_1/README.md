@@ -59,7 +59,7 @@ foreach ($block in "core", "frequency", "controls", "turnover_sensitivity") {
 .\.venv\Scripts\python.exe -B .\scripts\v3_1\summarize_v3_1_portfolio.py
 ```
 
-[组合与执行审计](results/step3/REVIEW.md) 汇总首轮 32 条账本和 32 条优化器敏感性账本。正式基准为 H00300，并同步保存 FloatMV 与 CSI300_EW 的逐年和全期超额。部分账本仍需按公司行动公告重算，2026 保留段继续隔离。
+[组合与执行审计](results/step3/REVIEW.md) 汇总首轮 32 条账本和 32 条优化器敏感性账本。正式基准为 H00300，并同步保存 FloatMV 与 CSI300_EW 的逐年和全期超额。公司行动已按公告入账。原始账本存于 `results/step3_before_actions`。
 
 复跑优化器网格：
 
@@ -72,9 +72,11 @@ foreach ($h in 5, 10) {
 .\.venv\Scripts\python.exe -B .\scripts\v3_1\summarize_v3_1_portfolio.py
 ```
 
-验收表的每一行都作为新版冻结门槛。多头信号、交易成本、组合 Beta 达标和公司行动账本分别审计。
+## Step 4 归因与非负方向复测
 
-[公司行动公告核对](results/step3/company_action_evidence.md) 汇总分红与两笔换股的发行人披露，账本待重算。
+[开发报告](DEVELOPMENT_REPORT_V3_1.md) 列出六因子年度有效权重、2024 月度与季度四项归因，以及修复账本前后的方向对照。非负 Ridge 与原始 Ridge 使用相同的融合及组合参数。终验状态由 `results/step4/freeze_gate_status.json` 单独登记，2026 保留段继续隔离。
+
+验收表的每一行都作为新版冻结门槛。多头信号、交易成本、组合 Beta 达标和公司行动账本分别审计。
 
 ## 仓库产物
 

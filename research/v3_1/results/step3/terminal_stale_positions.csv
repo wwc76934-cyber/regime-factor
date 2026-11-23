@@ -1,4 +1,1 @@
 ﻿strategy,code,first_stale_date,last_stale_date,stale_sessions,shares,locked_shares,terminal_mark_value
-fusion_50_50_h10_dynamic_eta0.96_ema1_20bp,sh.600837,2025-03-05,2025-12-31,205,500,0,5205.0
-v3_1_lgb_huber_h20_dynamic_eta0.96_ema1_10bp,sh.600005,2017-02-15,2025-12-31,2160,3500,0,12985.0
-v3_1_lgb_huber_h20_dynamic_eta0.96_ema1_20bp,sh.600005,2017-02-15,2025-12-31,2160,3500,0,12985.0

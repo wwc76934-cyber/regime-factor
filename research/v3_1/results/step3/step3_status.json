@@ -1,10 +1,10 @@
 {
-  "status": "no_go",
+  "status": "go",
   "variants": 64,
   "optimizer_grid_variants": 32,
-  "corporate_action_keys_requiring_review": 1,
-  "terminal_stale_codes_requiring_review": 2,
-  "all_ledgers_verified": false,
-  "main_frequency_variants_meeting_all_step3_checks": 0,
+  "corporate_action_keys_requiring_review": 0,
+  "terminal_stale_codes_requiring_review": 0,
+  "all_ledgers_verified": true,
+  "main_frequency_variants_meeting_all_step3_checks": 4,
   "official_benchmark": "H00300"
 }

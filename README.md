@@ -40,9 +40,9 @@ V3 将开发样本扩展至 2015–2025 年，增加市场调整收益标签、L
 
 ## V3.1 指数增强研究进展
 
-已完成开发数据审计、分层六因子筛选、60 日价值相对趋势状态，以及 5、10、20 日滚动模型对照。状态 Ridge 和 Huber LightGBM 通过 Step 2 信号门槛。Step 3 已完成首轮 32 组组合实验与 32 组优化器消融，结论为 No-Go，部分账本需按已核对的公司行动重算。2026 保留段继续隔离。
+已完成开发数据审计、分层六因子筛选、60 日价值相对趋势状态，以及 5、10、20 日滚动模型对照。状态 Ridge 和 Huber LightGBM 通过 Step 2 信号门槛。Step 3 的 64 条组合账本已完成公司行动对账。Step 4 已完成 2024 年归因和 Ridge 非负约束复测。最高 10 bp IR 为 0.534，低于 0.60 冻结门槛，2026 保留段继续隔离。
 
-[运行说明](research/v3_1/README.md) · [因子与风格审计](research/v3_1/results/step1/REVIEW.md) · [滚动模型结果](research/v3_1/results/step2/REVIEW.md) · [组合与执行审计](research/v3_1/results/step3/REVIEW.md)
+[运行说明](research/v3_1/README.md) · [因子与风格审计](research/v3_1/results/step1/REVIEW.md) · [滚动模型结果](research/v3_1/results/step2/REVIEW.md) · [组合与执行审计](research/v3_1/results/step3/REVIEW.md) · [V3.1 开发报告](research/v3_1/DEVELOPMENT_REPORT_V3_1.md)
 
 ## 本地运行
 

@@ -137,7 +137,7 @@ def prepare_market(factors, anchor):
 
 def make_planner(variant, schedule, signals, calibration, market, states, quotes, first_day, plan_log, signal_log):
     from optimize_v3_portfolio import solve as legacy
-    from v3_execution import money, stock_rules
+    from v3_1_execution import money, stock_rules
 
     weekly = {day:g.set_index("code") for day,g in signals.groupby("signal_date")}
     fee = variant.fee_bps/10000
@@ -258,11 +258,11 @@ def benchmark_metrics(nav, benchmarks):
     return pd.DataFrame(rows),pd.DataFrame(annual)
 
 
-def run(root, out, block, grid_horizon=None, grid_fee=None):
+def run(root, out, block, grid_horizon=None, grid_fee=None, predictions_dir=None, frontier_only=False):
     v3, _, days, _, _ = initialize(root)
     from optimize_v3_portfolio import (ACTION_COLUMNS, EXPOSURE_COLUMNS, HOLDING_COLUMNS, NAV_COLUMNS,
         ORDER_COLUMNS, execution_objects, load_actions)
-    from v3_execution import simulate
+    from v3_1_execution import simulate, verified_cash_event
 
     directory = root/"research/v3_1/results"
     step1,step2 = directory/"step1",directory/"step2"
@@ -275,7 +275,7 @@ def run(root, out, block, grid_horizon=None, grid_fee=None):
     panel["prior_mark"] = valid.groupby(panel.code).transform(lambda x:x.ffill().shift())
     days = days[(days>=START)&(days<=END)]
     quote_objects = execution_objects(panel.loc[panel.date.isin(days)])
-    events,review = load_actions(root,root/"research/v3/results/step1")
+    events,review = verified_cash_event(*load_actions(root,root/"research/v3/results/step1"))
     states = pd.read_parquet(step1/"states.parquet").set_index("signal_date")
     factors = pd.read_parquet(step1/"factor_panel.parquet")
     labels = pd.read_parquet(step1/"labels.parquet")
@@ -286,9 +286,14 @@ def run(root, out, block, grid_horizon=None, grid_fee=None):
     beta_history = beta_history.rename("BETA_120").reset_index()
     grid = [v for v in variants(block) if (grid_horizon is None or v.horizon==grid_horizon)
             and (grid_fee is None or v.fee_bps==grid_fee)]
+    if frontier_only:
+        grid = [v for v in grid if v.tc_penalty_bps==20 and v.risk_aversion==15 and v.active_limit==.02]
     if not grid:
         raise ValueError("No strategies match this block")
-    predictions = {h:pd.read_parquet(step2/f"h{h}"/"predictions.parquet") for h in (5,10,20)}
+    predictions = {}
+    for h in (5,10,20):
+        locked = predictions_dir/f"h{h}"/"predictions.parquet" if predictions_dir and h in (5,10) else None
+        predictions[h] = pd.read_parquet(locked or step2/f"h{h}"/"predictions.parquet")
     first = max(p.entry_date.min() for p in predictions.values())
     sets = {}
     result,tri,by_year,beta_table,all_issues = [],[],[],[],[]
@@ -367,6 +372,8 @@ if __name__=="__main__":
     parser.add_argument("--output",type=Path)
     parser.add_argument("--grid-horizon",type=int,choices=[5,10])
     parser.add_argument("--grid-fee-bps",type=int,choices=[10,20])
+    parser.add_argument("--predictions-dir",type=Path)
+    parser.add_argument("--frontier-only",action="store_true",help="Run only tc20, risk15, active0.02")
     args=parser.parse_args()
     grid_ids = (args.grid_horizon,args.grid_fee_bps)
     if args.block=="optimizer_grid" and not all(grid_ids):
@@ -376,4 +383,9 @@ if __name__=="__main__":
     destination = args.project_root/"research/v3_1/results/step3"/args.block
     if args.block=="optimizer_grid":
         destination /= f"h{args.grid_horizon}_{args.grid_fee_bps}bp"
-    run(args.project_root.resolve(),args.output or destination,args.block,*grid_ids)
+    if (args.frontier_only or args.predictions_dir) and args.block!="optimizer_grid":
+        parser.error("Frontier and custom forecast runs require optimizer_grid")
+    if args.predictions_dir and args.output is None:
+        parser.error("Custom forecasts require an independent --output")
+    run(args.project_root.resolve(),args.output or destination,args.block,*grid_ids,
+        predictions_dir=args.predictions_dir,frontier_only=args.frontier_only)
