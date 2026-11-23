@@ -69,6 +69,10 @@ def variants(block):
         elif block=="turnover_sensitivity":
             for horizon in (10,20):
                 yield Variant(FUSION,horizon,fee,ema=.3)
+        elif block=="symmetric_beta":
+            for policy in ("dynamic", "static"):
+                yield Variant(FUSION, 5, fee, construction=policy, ema=.3, tc_penalty_bps=20,
+                              risk_aversion=15, active_limit=.02)
         elif block=="optimizer_grid":
             for horizon,tc,risk,active in product((5,10),(20,25),(10,15),(.015,.02)):
                 yield Variant(FUSION,horizon,fee,ema=.3,tc_penalty_bps=tc,risk_aversion=risk,active_limit=active)
@@ -292,7 +296,8 @@ def run(root, out, block, grid_horizon=None, grid_fee=None, predictions_dir=None
         raise ValueError("No strategies match this block")
     predictions = {}
     for h in (5,10,20):
-        locked = predictions_dir/f"h{h}"/"predictions.parquet" if predictions_dir and h in (5,10) else None
+        custom_horizons = (5,) if block=="symmetric_beta" else (5,10)
+        locked = predictions_dir/f"h{h}"/"predictions.parquet" if predictions_dir and h in custom_horizons else None
         predictions[h] = pd.read_parquet(locked or step2/f"h{h}"/"predictions.parquet")
     first = max(p.entry_date.min() for p in predictions.values())
     sets = {}

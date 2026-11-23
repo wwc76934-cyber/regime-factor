@@ -1,0 +1,17 @@
+policy,check,observed,passed
+dynamic,H00300_excess_10bp,0.5290231526419613,True
+dynamic,H00300_excess_20bp,0.42298946264195436,True
+dynamic,IR_10bp,0.4017539609952664,False
+dynamic,2025_excess_or_relative_drawdown,0.05614755683145822,True
+dynamic,max_weekly_turnover_both,0.13658686657019903,True
+dynamic,min_offensive_beta_hit_both,0.7619047619047619,False
+dynamic,min_top30_hit_both,0.12255351681957186,True
+dynamic,ledger_flags_or_terminal_stale,0.0,True
+static,H00300_excess_10bp,0.5113511626419713,True
+static,H00300_excess_20bp,0.44675066264196905,True
+static,IR_10bp,0.40492577216718795,False
+static,2025_excess_or_relative_drawdown,0.06766293639603993,True
+static,max_weekly_turnover_both,0.12274644785870141,True
+static,min_offensive_beta_hit_both,0.6011904761904762,False
+static,min_top30_hit_both,0.12255351681957186,True
+static,ledger_flags_or_terminal_stale,0.0,True

@@ -78,7 +78,7 @@ def tree_features(x, state):
     return np.concatenate([x, np.broadcast_to(z, (len(x), len(z))), interaction], axis=1)
 
 
-def produce(weeks, workers):
+def produce(weeks, workers, *, monotone_base=False, prediction_probe=None):
     predictions, audit, weights = [], [], []
     tree = None
     tree_source = None
@@ -87,6 +87,8 @@ def produce(weeks, workers):
     state_dim = len(weeks[0].state)
     penalty = np.diag(np.r_[np.full(features,.05),np.full(features * state_dim,.5)])
     options = {**TREE_OPTIONS, "num_threads":workers}
+    if monotone_base:
+        options["monotone_constraints"] = [1] * features + [0] * (state_dim * (1 + features))
     for offset, current in enumerate(weeks):
         if not PREDICT_FIRST <= current.day <= DEVELOPMENT_LAST:
             continue
@@ -114,6 +116,8 @@ def produce(weeks, workers):
             tree_exit = max(w.exit for w in train)
         tree_z = np.clip((current.state - tree_center) / tree_scale, -3, 3)
         score = tree.predict(tree_features(current.x, tree_z), num_threads=workers)
+        if prediction_probe is not None:
+            prediction_probe(tree, current, tree_z)
         predictions.append(current.output.assign(strategy=TREE, score=score))
         audit.append((current.day, train[0].day, max(w.exit for w in train), len(train),
                       tree_source, tree_first, tree_exit))

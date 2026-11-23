@@ -1,0 +1,17 @@
+{
+  "status": "no_go",
+  "benchmark": "H00300",
+  "decision_fee_bps": 10,
+  "highest_paired_ir": 0.40492577216718795,
+  "original_ir_threshold": 0.6,
+  "applied_ir_threshold": 0.6,
+  "selected_policy": null,
+  "tested_policies": [
+    "dynamic",
+    "static"
+  ],
+  "holdout_window": [
+    "2026-01-01",
+    "2026-11-13"
+  ]
+}
